@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import {Route, Switch} from 'react-router-dom';
+import FullPost from './FullPost/FullPost';
 import Post from '../../components/Post/Post';
 import classes from './Posts.module.scss';
 import Button from '../../components/UI/Button/Button';
@@ -16,6 +18,10 @@ class Posts extends Component{
     newPostActionHandler=()=>{
       this.props.history.push({
         pathname:'/createpost'});
+    }
+
+    fullPostDirector=(id)=>{
+      this.props.history.push({pathname:this.props.match.url+'/'+id})
     }
 
     backEndTestHandler=()=>{
@@ -51,9 +57,24 @@ class Posts extends Component{
       posts = (this.state.posts.map(post=>{
 
         return(
-        <Post title={post.title} content={post.content} key={post.key}/>)}
+        <Post
+          title={post.title}
+          content={post.content}
+          key={post.key}
+          clicked={()=>this.fullPostDirector(post.key)}/>)}
       ));
     }
+
+    let postsBlock = <Pages>
+      <div>
+        {posts}
+        <div className={classes['post__button']}>
+          <Button action={this.newPostActionHandler} type='button'>New Post</Button>
+          <Button action={this.backEndTestHandler} type='button'>Test</Button>
+        </div>
+      </div>
+    </Pages>
+
     return(
             <Pages>
               <div>
@@ -62,8 +83,10 @@ class Posts extends Component{
                   <Button action={this.newPostActionHandler} type='button'>New Post</Button>
                   <Button action={this.backEndTestHandler} type='button'>Test</Button>
                 </div>
-
               </div>
+              <Switch>
+                <Route path={this.props.match.url + '/:id'} component={FullPost}/>
+              </Switch>
             </Pages>
     );
   }
