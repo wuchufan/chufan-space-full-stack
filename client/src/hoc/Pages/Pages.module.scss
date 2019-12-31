@@ -20,6 +20,9 @@
   &--width-medium{
     width:$pages-width-medium;
   }
+  &--width-max{
+    width:100%;
+  }
 
   &__content{
     padding-top:3rem;
