@@ -1,0 +1,19 @@
+@import '../../../sass/main.module.scss';
+
+.nav-brand{
+  position:relative;
+  background-color: $color-black;
+  height:100%;
+  width:$pages-width-medium;
+  text-align: center;
+  &__link{
+    display:inline-block;
+    margin-top:calc(#{$nav-bar-height}/4);
+    font-size: 2.3rem;
+    &:link,
+    &:visited{
+      color:$color-white;
+      text-decoration: none;
+    }
+  }
+}

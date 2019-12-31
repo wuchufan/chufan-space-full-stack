@@ -1,0 +1,15 @@
+@import '../../sass/main.module.scss';
+
+.Post{
+  border-radius: 1rem;
+  text-align: center;
+  padding: 2rem;
+  width:70%;
+  box-shadow: 0 .2rem .4rem grey;
+
+
+  &:not(:last-child){
+    margin: 0 auto 2rem;
+
+  }
+}

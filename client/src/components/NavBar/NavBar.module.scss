@@ -1,0 +1,11 @@
+@import '../../sass/main.module.scss';
+
+.NavBar{
+  font-weight: bold;
+  border-top:$container-border-top;
+  height:$nav-bar-height;
+  width:100%;
+  display:flex;
+  justify-content: flex-end;
+
+}

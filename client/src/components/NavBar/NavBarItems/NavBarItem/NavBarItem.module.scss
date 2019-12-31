@@ -1,0 +1,29 @@
+@import '../../../../sass/main.module.scss';
+
+
+.NavBarItem{
+  display:flex;
+  align-items: center;
+  height:100%;
+
+}
+.NavBarItem a{
+  padding: 1.5rem 2rem 0;
+  height:100%;
+  font-size: 1.5rem;
+  color:$color-primary-dark;
+  text-decoration: none;
+  display:block;
+  transition:border-color 0.3s ease, color 0.5s ease;
+
+}
+.NavBarItem a:hover,
+.NavBarItem a.active{
+  color:$color-black;
+  border-bottom:0.5rem solid $color-primary-light-1;
+
+}
+
+.NavBarItem a.active{
+  pointer-events: none;
+}

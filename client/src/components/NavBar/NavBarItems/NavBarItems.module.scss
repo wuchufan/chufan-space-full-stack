@@ -1,0 +1,9 @@
+@import '../../../sass/main.module.scss';
+
+.NavBarItems{
+  display:flex;
+  flex-direction: row;
+  margin:0;
+  height:100%;
+  font-size: 1.6rem;
+}

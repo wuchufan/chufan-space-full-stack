@@ -1,0 +1,30 @@
+@import '../../sass/main.module.scss';
+
+.side-bar{
+  position:fixed;
+  top:0;
+  left:0;
+  height:100vh;
+  padding:$pages-padding;
+  overflow-y:scroll;
+  background-color: transparent;
+  color:$color-white;
+  transition:all 1s ease;
+  width:calc(100% - #{$pages-width-medium});
+
+
+  &__content-box{
+      border-top:$container-border-top;
+      padding-top: 4rem;
+      height:100%;
+
+  }
+
+
+  &--width-medium{
+    width:calc(100% - #{$pages-width-medium});
+  }
+  &--width-small{
+    width:calc(100% - #{$pages-width-large});
+  }
+}

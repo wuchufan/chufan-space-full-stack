@@ -1,0 +1,32 @@
+@import '../../../sass/main.module.scss';
+
+.Label{
+  display:block;
+  text-transform: capitalize;
+  font-size: inherit;
+}
+
+.InputElement{
+  box-sizing: border-box;
+  display: block;
+  margin: 1rem 0;
+  padding:.5rem .5rem;
+  border:1px solid #ccc;
+  border-radius: .5rem;
+  font-size: inherit;
+  width:100%;
+
+}
+
+
+.InputElement:focus{
+  outline:none;
+}
+
+.textarea{
+  &--main{
+        background-color: rgba($color-white,0.75);
+        resize:none;
+        height:10rem;
+  }
+}

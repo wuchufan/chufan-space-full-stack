@@ -1,0 +1,30 @@
+@import '../../sass/main.module.scss';
+
+.side-bar{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  justify-content: flex-start;
+  min-height:100%;
+
+  &__title,
+  &__cat-words{
+    margin-bottom: 3rem;
+  }
+
+
+
+  &__cat-words{
+
+   & span{
+     font-size:1.7rem;
+     display:block;
+     line-height:2;
+    color:$color-primary-light-1;
+    font-weight:700;
+
+   }
+  }
+
+
+}

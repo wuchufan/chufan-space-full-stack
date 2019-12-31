@@ -1,0 +1,28 @@
+@import '../../sass/main.module.scss';
+
+.pages{
+  &__container{
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  overflow-y:scroll;
+  padding:$pages-padding;
+  transition: all 1s ease;
+  background-color: $color-primary-light-2;
+  min-height: 100vh;
+
+  }
+  &--width-large{
+    width:$pages-width-large;
+  }
+
+  &--width-medium{
+    width:$pages-width-medium;
+  }
+
+  &__content{
+    padding-top:3rem;
+  }
+
+}

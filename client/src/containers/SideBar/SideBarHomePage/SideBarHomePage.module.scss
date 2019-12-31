@@ -1,0 +1,46 @@
+@import '../../../sass/main.module.scss';
+
+.home{
+  display:flex;
+  flex-direction:column;
+  justify-content: space-between;
+  min-height:100%;
+
+  &__title,
+  &__cat-words,
+  &__message-box{
+    margin-bottom: 3rem;
+  }
+
+
+  &__title-span{
+
+      line-height:1.2;
+      display:block;
+      text-transform: capitalize;
+
+
+  }
+
+  &__cat-words{
+   & span{
+     font-size:1.7rem;
+     display:block;
+     line-height:2;
+    color:$color-primary-light-1;
+    font-weight:700;
+
+   }
+  }
+
+  &__message-box{
+
+    font-size: 2rem;
+    line-height:2;
+    color:rgba($color-primary-dark, 0.8);
+    font-weight:700;
+
+
+  }
+
+}
