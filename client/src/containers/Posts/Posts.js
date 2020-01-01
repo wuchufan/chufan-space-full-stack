@@ -10,7 +10,7 @@ class Posts extends Component{
 
   render(){
 
-
+    console.log();
     return(
       <Switch>
 

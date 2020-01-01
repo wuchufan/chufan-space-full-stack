@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from '../../../axios-instance';
+import axios from 'axios';
 import Pages from '../../../hoc/Pages/Pages';
 
 
@@ -10,14 +10,13 @@ class FullPost extends Component{
   }
 
   componentDidMount(){
-
-    console.log(this.props);
     this.loadData();
   }
 
   loadData=()=>{
     if(this.props.match.params.id){
-      axios.get('posts/' + this.props.match.params.id + '.json')
+      // console.log(this.props.match.params.id);
+      axios.get(this.props.match.params.id)
       .then((response)=>{
         console.log(response.data);
         this.setState({loadedPost:response.data})
@@ -44,7 +43,6 @@ class FullPost extends Component{
     }
     return(
       <Pages>
-
         {post}
 
       </Pages>
