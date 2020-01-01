@@ -7,7 +7,7 @@ import testAxios from 'axios';
 import Pages from '../../../hoc/Pages/Pages';
 import withErrorHandler from '../../../hoc/withErrorHandler/withErrorHandler';
 
-class Posts extends Component{
+class PostsList extends Component{
 
     state={
       posts:null,
@@ -25,7 +25,7 @@ class Posts extends Component{
     backEndTestHandler=()=>{
       testAxios.get('/test')
       .then((response)=>{
-        console.log(response.data);
+        console.log(response);
       })
       .catch((error)=>{
         console.log(error);
@@ -78,4 +78,4 @@ class Posts extends Component{
   }
 }
 
-export default withErrorHandler(Posts,axios);
+export default withErrorHandler(PostsList,axios);

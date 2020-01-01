@@ -27,4 +27,8 @@
   &--width-small{
     width:calc(100% - #{$pages-width-large});
   }
+  &--width-none{
+    width:0;
+  }
+
 }

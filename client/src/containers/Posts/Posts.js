@@ -15,7 +15,7 @@ class Posts extends Component{
       <Switch>
 
         <Route path='/posts' exact component={PostsList}/>
-        <Route path={this.props.match.url + '/:id'} component={FullPost}/>
+        <Route path={this.props.match.url + '/:id'} exact component={FullPost}/>
 
       </Switch>
     );

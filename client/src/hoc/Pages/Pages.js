@@ -7,17 +7,21 @@ class Pages extends Component {
 
   render(){
     let pageWidth=[classes['pages__container']];
-    console.log(this.props.location.pathname);
     switch (this.props.location.pathname){
       case '/':
         pageWidth.push(classes['pages--width-medium']);
       break;
 
       case '/posts':
-      pageWidth.push(classes['pages--width-large']);
+        pageWidth.push(classes['pages--width-large']);
       break;
+
+      case '/posts/' + this.props.match.params.id:
+        pageWidth.push(classes['pages--width-max']);
+      break;
+
       default:
-      pageWidth.push(classes['pages--width-max']);
+      pageWidth.push(classes['pages--width-medium']);
       break;
     }
     return(
