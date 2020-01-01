@@ -30,18 +30,24 @@ app.get('/posts',(req,res)=>{
     }
   )
 });
-// 
-// app.get('/posts/:id',(req,res)=>{
-//   composeModel.findById({
-//   _id: req.params.post
-// }, function(err, foundCompose) {
-//   // console.log(foundCompose);
-//   res.send({
-//     publishTitle: foundCompose.composeTitle,
-//     publishBodyLB: foundCompose.composeLBBody
-//     });
-//   });
-// });
+
+app.get('/posts/:id',(req,res)=>{
+
+  composeModel.findById({
+  _id: req.params.id
+}, function(err, foundCompose) {
+  console.log(foundCompose);
+  if (!err){
+    res.send({
+      publishTitle: foundCompose.composeTitle,
+      publishBodyLB: foundCompose.composeLBBody
+      });
+  } else {
+    console.log(err);
+    }
+
+  });
+});
 
 app.listen(5000, ()=>{
   console.log("Sever is up at 5000");

@@ -28,23 +28,31 @@ class FullPost extends Component{
   }
 
   render(){
-    let post = <h1>Loading...</h1>
+    let post = <h1>Loading...</h1>;
+    let postBody = null;
     if (this.state.loadedPost){
+    console.log(this.state.loadedPost.publishBodyLB);
+    postBody = [...this.state.loadedPost.publishBodyLB].map((el,index)=>{
+        if (!el) return <br/>
+        return(
+          <p key={index}>{el}</p>
+        )
+      })
+
       post = (
         <div>
           <h1>
-            {this.state.loadedPost.title}
+            {this.state.loadedPost.publishTitle}
           </h1>
-          <p>
-            {this.state.loadedPost.content}
-          </p>
+          
+          {postBody}
+
         </div>
       )
     }
     return(
       <Pages>
         {post}
-
       </Pages>
     );
 
