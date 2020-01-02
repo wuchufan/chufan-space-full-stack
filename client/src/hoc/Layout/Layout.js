@@ -29,8 +29,8 @@ class Layout extends Component {
             {/* SideBar */}
             <TransitionGroup >
               <CSSTransition key={location.key} timeout={{
-                enter: 400,
-                exit: 400
+                enter: 200,
+                exit: 300
               }} classNames={fade} unmountOnExit>
 
                 <Switch location={location}>
@@ -46,8 +46,8 @@ class Layout extends Component {
             {/* Content Page */}
             <TransitionGroup >
               <CSSTransition key={location.key} timeout={{
-                enter: 300,
-                exit: 400
+                enter: 200,
+                exit: 300
               }} classNames={transition} unmountOnExit>
                 <Switch location={location}>
                   <Route path='/createpost' exact component={CreatePost}/>

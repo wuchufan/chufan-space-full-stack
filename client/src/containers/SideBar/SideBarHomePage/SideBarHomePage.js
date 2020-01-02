@@ -23,12 +23,14 @@ class SideBarHomePage extends Component{
 
               <span className={
                 [classes['home__title-span'],
+                classes['home__title-span--1'],
                 classes['heading-primary--main']]
                 .join(' ')}>
                 Greetings
               </span>
               <span className={
                 [classes['home__title-span'],
+                classes['home__title-span--2'],
                 classes['heading-primary--sub']]
                 .join(' ')}>
                 traveler,

@@ -6,7 +6,7 @@
     &-active{
       opacity:1;
       transform:translate(0,0);
-      transition:all 200ms ease-out 100ms;
+      transition:all 100ms ease-out 100ms;
     }
 
   }
@@ -15,5 +15,5 @@
   .exit-active{
     opacity:0;
     transform:translate(100%,0);
-    transition:all 400ms ease-in;
+    transition:all 300ms ease-in;
   }

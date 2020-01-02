@@ -3,6 +3,8 @@
 .home{
   display:flex;
   flex-direction:column;
+  animation:$animation-move-left-medium-delay;
+  animation-fill-mode: backwards;
 
   & > div{
     margin-bottom:3rem;

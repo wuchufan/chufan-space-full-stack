@@ -19,12 +19,7 @@ class HomePage extends Component{
 
           <div className={classes['row']}>
             <section className={classes['home']}>
-              <div className={classes['home__announcement']}>
-                <h3 className={classes['heading-secondary']}>Announcement:</h3>
-                <p>
-                  The Meowster is currently working hard on expanding this universe.
-                </p>
-              </div>
+
 
               <div className={classes['home__main']}>
                 <p className={classes['home__main--paragraph']}>
@@ -32,7 +27,7 @@ class HomePage extends Component{
                   Please do make yourself comfortable, roam around, I have put my work in here.
                 </p>
                 <p className={classes['home__main--paragraph']}>
-                  If you want to learn more about me. Use this portal :)
+                  If you want to learn more about me, use this portal :)
                 </p>
 
                 <NavLink to='/about'>
@@ -46,7 +41,12 @@ class HomePage extends Component{
                   <BlockMath math="\nabla \cdot \vec{E}=\frac \rho {\epsilon_0}"/>
                 </div> */}
               </div>
-
+              <div className={classes['home__announcement']}>
+                <h3 className={classes['heading-secondary']}>Announcement:</h3>
+                <p>
+                  The Meowster is currently working hard on expanding this universe.
+                </p>
+              </div>
 
             </section>
           </div>

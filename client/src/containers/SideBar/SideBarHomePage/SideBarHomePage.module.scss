@@ -19,10 +19,23 @@
       display:block;
       text-transform: capitalize;
 
+      &--1{
+        animation:$animation-move-left-no-delay;
+
+      }
+
+      &--2{
+
+        animation:$animation-move-right-no-delay;
+      }
+
 
   }
 
   &__cat-words{
+    animation:$animation-move-up-short-delay;
+    animation-fill-mode: backwards;
+
    & span{
      font-size:1.7rem;
      display:block;
@@ -34,7 +47,8 @@
   }
 
   &__message-box{
-
+    animation:$animation-move-up-short-delay;
+    animation-fill-mode: backwards;
     font-size: 2rem;
     line-height:2;
     color:rgba($color-primary-dark, 0.8);

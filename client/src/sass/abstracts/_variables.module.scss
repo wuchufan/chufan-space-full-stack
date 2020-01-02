@@ -32,6 +32,15 @@ $pages-padding: 4rem 3.5rem;
 
 //FONT
 
+//ANIMATION
+
+$animation-move-left-no-delay:moveInLeft 1200ms ease-out;
+$animation-move-left-medium-delay:moveInLeft 1200ms ease-out 1050ms;
+$animation-move-right-no-delay:moveInRight 1200ms ease-out;
+$animation-move-right-medium-delay:moveInRight 1200ms ease-out 1050ms;
+$animation-move-up-short-delay:moveInUp 1200ms ease-out 750ms;
+$animation-move-up-medium-delay:moveInUp 1200ms ease-out 1050ms;
+$animation-move-down-medium-delay:moveInBottom 1200ms ease-out 1050ms;
 
 //GRID
 $grid-width:114rem;

@@ -1,16 +1,23 @@
 @import '../../sass/main.module.scss';
 
 .Post{
-  background-color: $color-white;
+  background-color: rgba($color-white,0.5);
+  display:flex;
+  align-items: center;
   text-align: left;
   width:70%;
-  min-height: 10rem;
+  min-height: 20rem;
   padding:4rem;
   border-radius: 3px;
+  transform: skewX(-5deg);
+  box-shadow: .5rem .9rem 1rem rgba($color-grey-dark-2,0.2);
+
 
 
   &__container{
+    width:100%;
     border-bottom: .13rem dotted $color-primary-light-1;
+
   }
 
 
@@ -18,8 +25,7 @@
   &__title{
 
     font-family: Playfair Display;
-
-    width:100%;
+    transform:skewX(5deg);
     padding: 2rem;
     padding-left:0;
     font-size:2.5rem;
@@ -30,7 +36,7 @@
 
     &:hover{
       color:$color-grey-dark-2;
-      transform:translateX(.9rem);
+      transform:translateX(.9rem) skewX(5deg);
 
 
 
@@ -38,7 +44,7 @@
   }
 
   &:not(:last-child){
-    margin: 0 0 3rem;
+    margin: 0 0 7rem;
 
   }
 

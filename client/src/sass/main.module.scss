@@ -1,3 +1,5 @@
+//Animations
+@import 'base/animations.module.scss';
 
 //Variables
 @import 'abstracts/variables.module.scss';
@@ -15,31 +17,6 @@
 //Utilities
 @import 'base/utilities.module.scss';
 
-//Components
-
-// @import '../components/NavBar/NavBar.module.scss';
-// @import '../components/NavBar/NavBrand/NavBrand.module.scss';
-// @import '../components/NavBar/NavBarItems/NavBarItem/NavBarItem.module.scss';
-// @import '../components/NavBar/NavBarItems/NavBarItems.module.scss';
-
-
-// @import '../components/Background/BgCanvas/PureCanvas/PureCanvas.module.scss';
-// @import '../components/Post/Post.module.scss';
-
-// @import '../components/UI/Model/Model.module.scss';
-// @import '../components/UI/Input/Input.module.scss';
-// @import '../components/UI/Button/Button.module.scss';
-
-// @import '../components/SideBarLayout/SideBarLayout.module.scss';
-
-//Pages
-// @import '../containers/CreatePost/CreatePost.module.scss';
-// @import '../containers/HomePage/HomePage.module.scss';
-// @import '../containers/Posts/Posts.module.scss';
-// @import '../containers/SideBar/SideBar.module.scss';
-// @import '../containers/SideBar/SideBarHomePage/SideBarHomePage.module.scss';
 
 //Layout
 @import 'layout/grid.scss';
-// @import '../hoc/Layout/Layout.module.scss';
-// @import '../hoc/Pages/Pages.module.scss';
