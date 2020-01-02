@@ -14,5 +14,9 @@
 
   &__main{
     font-size:1.6rem;
+
+    &--paragraph:last-of-type{
+      margin-bottom: 3rem;
+    }
   }
 }

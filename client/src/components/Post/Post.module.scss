@@ -5,7 +5,7 @@
   align-items: flex-end;
   text-align: left;
   width:80%;
-  height: 13rem;
+  height: 10rem;
 
 
 
@@ -19,6 +19,7 @@
     cursor:pointer;
     transition: all 0.3s;
     border-bottom: .3rem solid $color-primary-light-1;
+    
 
     &:hover{
       color:$color-grey-dark-2;

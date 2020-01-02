@@ -27,11 +27,11 @@ class HomePage extends Component{
               </div>
 
               <div className={classes['home__main']}>
-                <p>
+                <p className={classes['home__main--paragraph']}>
                   Hi, I'm Chufan. I'm currently away from home. I had imformed Schrodinger to take care of any incidants.
                   Please do make yourself comfortable, roam around, I have put my work in here.
                 </p>
-                <p>
+                <p className={classes['home__main--paragraph']}>
                   If you want to learn more about me. Use this portal :)
                 </p>
 
