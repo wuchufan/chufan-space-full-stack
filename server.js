@@ -36,7 +36,6 @@ app.get('/posts/:id',(req,res)=>{
   composeModel.findById({
   _id: req.params.id
 }, function(err, foundCompose) {
-  console.log(foundCompose);
   if (!err){
     res.send({
       publishTitle: foundCompose.composeTitle,

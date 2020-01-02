@@ -1,16 +1,38 @@
 @import '../../sass/main.module.scss';
 
 .Post{
-  border-radius: 1rem;
-  text-align: center;
-  padding: 2rem;
-  width:70%;
-  box-shadow: 0 .2rem .4rem grey;
-  cursor:pointer;
+  display:flex;
+  align-items: flex-end;
+  text-align: left;
+  width:80%;
+  height: 13rem;
 
+
+
+
+
+  &__title{
+    width:100%;
+    padding: 2rem;
+    padding-left:0;
+    font-size:2.5rem;
+    cursor:pointer;
+    transition: all 0.3s;
+    border-bottom: .3rem solid $color-primary-light-1;
+
+    &:hover{
+      color:$color-grey-dark-2;
+      transform:translateY(-.1rem) scale(1.05);
+
+
+
+    }
+  }
 
   &:not(:last-child){
-    margin: 0 auto 2rem;
+    margin: 0 auto 3rem;
 
   }
+
+
 }

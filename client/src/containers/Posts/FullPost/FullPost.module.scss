@@ -1,0 +1,21 @@
+@import '../../../sass/main.module.scss';
+
+
+.full-post{
+  max-width: 70rem;
+  margin:0 auto;
+
+
+
+  &__title{
+    margin-bottom: 4rem;
+    font-weight:700;
+    font-size: 4rem;
+  }
+
+  &__article{
+    font-size: 1.8rem;
+    font-weight:400;
+
+  }
+}

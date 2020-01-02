@@ -15,6 +15,11 @@ const button = (props) =>{
     button = <span onClick={props.action} className={classes['btn--text']}>{props.children}</span>
     break;
 
+    case 'text-2':
+    button = <span onClick={props.action} className={classes['btn--text--2']}>{props.children}</span>
+    break;
+
+    
     default:
     button = <button onClick={props.action}
       className={classes.btn}>{props.children}</button>;

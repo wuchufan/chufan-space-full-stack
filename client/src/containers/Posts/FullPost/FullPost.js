@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import classes from './FullPost.module.scss';
 import axios from 'axios';
 import Pages from '../../../hoc/Pages/Pages';
 
@@ -15,10 +16,8 @@ class FullPost extends Component{
 
   loadData=()=>{
     if(this.props.match.params.id){
-      // console.log(this.props.match.params.id);
       axios.get(this.props.match.params.id)
       .then((response)=>{
-        console.log(response.data);
         this.setState({loadedPost:response.data})
       })
       .catch((error)=>{
@@ -31,22 +30,23 @@ class FullPost extends Component{
     let post = <h1>Loading...</h1>;
     let postBody = null;
     if (this.state.loadedPost){
-    console.log(this.state.loadedPost.publishBodyLB);
     postBody = [...this.state.loadedPost.publishBodyLB].map((el,index)=>{
-        if (!el) return <br/>
+        if (!el) return <br key={index}/>
         return(
           <p key={index}>{el}</p>
         )
       })
 
       post = (
-        <div>
-          <h1>
-            {this.state.loadedPost.publishTitle}
-          </h1>
-          
-          {postBody}
 
+        <div className={classes['full-post']}>
+          <article className={classes['full-post__article']}>
+
+            <h1 className={[classes['full-post__title']].join(' ')}>
+              {this.state.loadedPost.publishTitle}
+            </h1>
+            {postBody}
+          </article>
         </div>
       )
     }

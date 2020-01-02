@@ -22,25 +22,9 @@ class PostsList extends Component{
     }
 
     componentDidMount(){
-
-      // axios.get('/posts.json')
-      // .then((response)=>{
-      //
-      //   const fetchedPosts = [];
-      //   for (let fetchedPost in response.data){
-      //
-      //     fetchedPosts.push({...response.data[fetchedPost], key:fetchedPost});
-      //   }
-      //   this.setState({posts:fetchedPosts});
-      // })
-      // .catch((error)=>{
-      //   console.log(error);
-      //   this.setState({error:true});
-      // });
-
       axios.get('/posts')
       .then((response)=>{
-        console.log(response.data);
+        
         const fetchedPosts = [];
 
         //response.data -> [{},{},...]
@@ -56,6 +40,8 @@ class PostsList extends Component{
         this.setState({error:true});
       });
     }
+
+
   render(){
     let posts = this.state.error ? <p className={classes.Loading}>Posts cannot be loaded</p> : <p className={classes.Loading}>Posts are loading...</p>;
     if (this.state.posts){
@@ -72,13 +58,13 @@ class PostsList extends Component{
 
     return(
             <Pages>
-              <div>
+              <section>
                 {posts}
                 <div className={classes['post__button']}>
                   <Button action={this.newPostActionHandler} type='button'>New Post</Button>
 
                 </div>
-              </div>
+              </section>
 
             </Pages>
     );

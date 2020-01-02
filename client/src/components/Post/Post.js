@@ -4,13 +4,10 @@ import classes from './Post.module.scss';
 const post = (props) => {
   return (
 
-    <article className={classes.Post} onClick={props.clicked}>
-      <h1 className={classes['heading-primary']}>
+    <article className={classes['Post']}>
+      <h3 className={classes['Post__title']} onClick={props.clicked}>
         {props.title}
-      </h1>
-      <p className={classes.paragraph}>
-        {props.content}
-      </p>
+      </h3>
     </article>);
 };
 

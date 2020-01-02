@@ -1,1 +1,18 @@
 @import '../../sass/main.module.scss';
+
+.home{
+  display:flex;
+  flex-direction:column;
+
+  & > div{
+    margin-bottom:3rem;
+  }
+
+  &__announcement{
+    font-size:3rem;
+  }
+
+  &__main{
+    font-size:1.6rem;
+  }
+}
