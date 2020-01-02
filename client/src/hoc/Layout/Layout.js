@@ -29,7 +29,7 @@ class Layout extends Component {
             {/* SideBar */}
             <TransitionGroup >
               <CSSTransition key={location.key} timeout={{
-                enter: 500,
+                enter: 400,
                 exit: 400
               }} classNames={fade} unmountOnExit>
 
@@ -46,7 +46,7 @@ class Layout extends Component {
             {/* Content Page */}
             <TransitionGroup >
               <CSSTransition key={location.key} timeout={{
-                enter: 500,
+                enter: 300,
                 exit: 400
               }} classNames={transition} unmountOnExit>
                 <Switch location={location}>

@@ -24,12 +24,12 @@ class PostsList extends Component{
     componentDidMount(){
       axios.get('/posts')
       .then((response)=>{
-        
+
         const fetchedPosts = [];
 
         //response.data -> [{},{},...]
         for (let i = 0; i < response.data.length; i++){
-          console.log(response.data[i]);
+
           fetchedPosts.push(response.data[i]);
         }
 
@@ -58,7 +58,7 @@ class PostsList extends Component{
 
     return(
             <Pages>
-              <section>
+              <section className={classes['post']}>
                 {posts}
                 <div className={classes['post__button']}>
                   <Button action={this.newPostActionHandler} type='button'>New Post</Button>
