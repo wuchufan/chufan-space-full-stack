@@ -5,20 +5,61 @@
   flex-direction:column;
   animation:$animation-move-right-medium-delay;
   animation-fill-mode: backwards;
+  padding:3rem;
 
-  & > div{
-    margin-bottom:3rem;
+  & > div:not(&__title){
+    margin-bottom:8rem;
+
+
   }
 
-  &__announcement{
-    font-size:3rem;
-  }
+  &__title{
+      margin-bottom:3rem;
+      padding:0 0 1rem 2rem;
 
-  &__main{
-    font-size:1.6rem;
+      border-bottom: 1px dotted $color-primary-light-1;
 
-    &--paragraph:last-of-type{
-      margin-bottom: 3rem;
+
+    &--heading{
+      font-size: 2rem;
+      line-height: 1.2;
+      color:rgba($color-primary-dark,0.6);
+
+    }
+    &--span{
+        font-size: 4rem;
+        color:$color-primary;
+        display: block;
     }
   }
+
+  &__message{
+    background-color: $color-white;
+    padding:3.5rem 3rem;
+    box-shadow:0 1rem 1rem $color-grey-light-2;
+    border-radius:10px;
+
+
+
+    &--paragraph{
+      margin-bottom:1rem;
+      font-size:1.8rem;
+      font-weight:100;
+    }
+    &--button{
+      font-size:1.5rem;
+    }
+  }
+
+
+
+
+  &__announcement{
+    background-color: $color-white;
+    padding:3.5rem 3rem;
+    box-shadow:0 1rem 1rem $color-grey-light-2;
+    border-radius:10px;
+    font-size:2rem;
+  }
+
 }
