@@ -12,6 +12,10 @@ class Pages extends Component {
         pageWidth.push(classes['pages--width-medium']);
       break;
 
+      case '/about':
+        pageWidth.push(classes['pages--width-large']);
+        break;
+
       case '/posts':
         pageWidth.push(classes['pages--width-large']);
       break;

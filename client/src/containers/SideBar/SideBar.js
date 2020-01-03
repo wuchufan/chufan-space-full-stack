@@ -13,6 +13,10 @@ class SideBar extends Component{
         sideBarWidth.push(classes['side-bar--width-medium']);
       break;
 
+      case '/about':
+        sideBarWidth.push(classes['side-bar--width-small']);
+        break;
+
       case '/posts':
       sideBarWidth.push(classes['side-bar--width-small']);
       break;
@@ -20,7 +24,7 @@ class SideBar extends Component{
       case '/posts/' + this.props.match.params.id:
       sideBarWidth.push(classes['side-bar--width-none'])
       break;
-      
+
       default:
       sideBarWidth.push(classes['side-bar--width-medium']);
       break;

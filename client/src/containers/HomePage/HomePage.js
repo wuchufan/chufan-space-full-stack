@@ -45,10 +45,16 @@ class HomePage extends Component{
                 </div>
               </div>
               <div className={classes['home__announcement']}>
-                <h3 className={classes['home__announcememt--heading']}>Announcement:</h3>
-                <p className={classes['home__announcement--content']}>
-                  The Meowster is currently working hard on expanding this universe.
-                </p>
+                <figure className={classes['home__announcemen--image']}>
+
+                </figure>
+                <div className={classes['home__announcement--text']}>
+                  <h3 className={classes['home__announcememt--heading']}>Announcement:</h3>
+                  <p className={classes['home__announcement--content']}>
+                    Meowster is currently working hard on expanding this universe. He is looking for ideas on what to add. Tell me by leaving a message, meow!
+                  </p>
+                </div>
+
               </div>
 
             </section>
