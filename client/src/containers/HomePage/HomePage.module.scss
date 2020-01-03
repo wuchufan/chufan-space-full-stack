@@ -3,7 +3,7 @@
 .home{
   display:flex;
   flex-direction:column;
-  animation:$animation-move-left-medium-delay;
+  animation:$animation-move-right-medium-delay;
   animation-fill-mode: backwards;
 
   & > div{
