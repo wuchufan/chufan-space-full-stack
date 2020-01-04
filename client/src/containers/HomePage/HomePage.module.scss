@@ -9,14 +9,18 @@
 
   & > div:not(&__title){
     margin-bottom:8rem;
-
+    background-color: rgba($color-white,0.65);
+    padding:$block-padding;
+    box-shadow:0 1rem 1rem $color-grey-light-2;
+    border-radius:10px;
+    font-weight:100;
+    font-size:$block-font;
 
   }
 
   &__title{
       margin-bottom:3rem;
       padding:0 0 1rem 2rem;
-
       border-bottom: 1px dotted $color-primary-light-1;
 
 
@@ -34,17 +38,10 @@
   }
 
   &__message{
-    background-color: $color-white;
-    padding:$block-padding;
-    box-shadow:0 1rem 1rem $color-grey-light-2;
-    border-radius:10px;
-
-
 
     &--paragraph{
       margin-bottom:1rem;
-      font-size:$block-font;
-      font-weight:100;
+
     }
     &--button{
       font-size:1.5rem;
@@ -55,12 +52,7 @@
 
 
   &__announcement{
-    background-color: $color-white;
-    padding:$block-padding;
-    box-shadow:0 1rem 1rem $color-grey-light-2;
-    border-radius:10px;
-    font-weight:100;
-    font-size:$block-font;
+
   }
 
 }

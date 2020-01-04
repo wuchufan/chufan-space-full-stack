@@ -19,7 +19,7 @@ class HomePage extends Component{
             <section className={classes['home']}>
               <div className={classes['home__title']}>
                 <h1 className={classes['home__title--heading']}>
-                Hi, I'm <span className={classes['home__title--span']}>Chufan Wu.</span>
+                  Hi, I'm <span className={classes['home__title--span']}>Chufan Wu.</span>
                 </h1>
               </div>
 
