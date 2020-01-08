@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Post from '../../../components/Post/Post';
 import classes from './PostsList.module.scss';
-import Button from '../../../components/UI/Button/Button';
+// import Button from '../../../components/UI/Button/Button';
 import axios from 'axios';
 import Pages from '../../../hoc/Pages/Pages';
 import withErrorHandler from '../../../hoc/withErrorHandler/withErrorHandler';
@@ -60,10 +60,10 @@ class PostsList extends Component{
             <Pages>
               <section className={classes['post']}>
                 {posts}
-                <div className={classes['post__button']}>
+                {/* <div className={classes['post__button']}>
                   <Button action={this.newPostActionHandler} type='button'>New Post</Button>
-
-                </div>
+                  
+                </div> */}
               </section>
 
             </Pages>

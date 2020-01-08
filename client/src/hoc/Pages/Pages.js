@@ -6,33 +6,46 @@ import NavBar from '../../components/NavBar/NavBar';
 class Pages extends Component {
 
   render(){
-    let pageWidth=[classes['pages__container']];
+    let pageStyle=[];
     switch (this.props.location.pathname){
       case '/':
-        pageWidth.push(classes['pages--width-medium']);
+        pageStyle.push(
+        classes['pages--width-medium'],
+        classes['pages__container']);
       break;
 
       case '/about':
-        pageWidth.push(classes['pages--width-large']);
+        pageStyle.push(
+          classes['pages--width-max'],
+          classes['pages__container'],
+          classes['pages__about']);
         break;
 
       case '/posts':
-        pageWidth.push(classes['pages--width-large']);
+        pageStyle.push(
+        classes['pages--width-large'],
+        classes['pages__container']);
       break;
 
       case '/posts/' + this.props.match.params.id:
-        pageWidth.push(classes['pages--width-max']);
+        pageStyle.push(
+        classes['pages--width-max'],
+        classes['pages__container']);
       break;
 
       default:
-      pageWidth.push(classes['pages--width-medium']);
+      pageStyle.push(
+        classes['pages--width-medium'],
+        classes['pages__container']
+    );
       break;
     }
     return(
-      <div className={pageWidth.join(' ')}>
+      <div className={pageStyle.join(' ')}>
         <div className={classes['pages__container--inner']}>
+          {/* {this.props.location.pathname ==='/about' ? null : <NavBar/>} */}
           <NavBar/>
-          <div className={classes['pages__content']}>
+          <div className={this.props.location.pathname === '/about' ? null : classes['pages__content']} >
             {this.props.children}
           </div>
         </div>
