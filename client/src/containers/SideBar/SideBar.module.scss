@@ -10,7 +10,7 @@
   background-color: transparent;
   color:$color-white;
   transition:all 1s ease;
-  width:calc(100% - #{$pages-width-medium});
+
 
 
   &__content-box{
@@ -18,6 +18,15 @@
       padding-top: 4rem;
       height:100%;
 
+      &--about{
+        border-top:none;
+
+      }
+  }
+
+  &__about{
+    background-color:$color-primary;
+    z-index: 9999;
   }
 
 

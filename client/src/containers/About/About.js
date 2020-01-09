@@ -9,16 +9,14 @@ class About extends Component{
   render(){
     return (
       <Pages>
-        <section className={classes['section-about']}>
-          
 
-          <div>
+        <section className={classes['section-about']}>
+          <div className={classes['content']}>
             <h1>
               This is About
             </h1>
           </div>
         </section>
-
       </Pages>
     )
   }

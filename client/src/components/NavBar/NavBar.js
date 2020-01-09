@@ -1,20 +1,29 @@
 import React, {Component} from 'react';
 import NavBarItems from './NavBarItems/NavBarItems';
+import {withRouter} from 'react-router-dom';
 // import NavBrand from './NavBrand/NavBrand';
 import classes from './NavBar.module.scss';
 
 class NavBar extends Component {
   render(){
+    let navBarStyle = [classes['NavBar']];
+    switch (this.props.location.pathname){
+      case '/about':
+      navBarStyle.push(classes['NavBar--about']);
+      break;
+      default:
+      break;
+    }
+    console.log(this.props);
     return(
       <React.Fragment>
+        <nav className={navBarStyle.join(' ')}>
+          <NavBarItems location={this.props.location.pathname}/>
 
-        <nav className={classes.NavBar}>
-
-          <NavBarItems/>
         </nav>
       </React.Fragment>
     );
   }
 }
 
-export default NavBar;
+export default withRouter(NavBar);

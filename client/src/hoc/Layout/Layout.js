@@ -12,7 +12,7 @@ import fade from '../../sass/transitions/fade.module.scss';
 import SideBarHomePage from '../../containers/SideBar/SideBarHomePage/SideBarHomePage';
 import SideBarPosts from '../../containers/SideBar/SideBarPosts/SideBarPosts';
 import SideBarLibrary from '../../containers/SideBar/SideBarLibrary/SideBarLibrary';
-// import SideBarAbout from '../../containers/SideBar/SideBarAbout/SideBarAbout';
+import SideBarAbout from '../../containers/SideBar/SideBarAbout/SideBarAbout';
 import Background from '../../components/Background/Background';
 import Aux from '../Aux/Aux';
 
@@ -34,7 +34,7 @@ class Layout extends Component {
               }} classNames={fade} unmountOnExit>
 
                 <Switch location={location}>
-                  {/* <Route path='/about' exact component={SideBarAbout}/> */}
+                  <Route path='/about' exact component={SideBarAbout}/>
                   <Route path='/library' exact component={SideBarLibrary}/>
                   <Route path='/posts' exact component={SideBarPosts}/>
                   <Route path='/' exact component={SideBarHomePage}/>

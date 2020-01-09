@@ -6,4 +6,9 @@
   margin:0;
   height:100%;
   font-size: 1.6rem;
+
+  &--about{
+    flex-direction:column;
+    justify-content: space-around;
+  }
 }
