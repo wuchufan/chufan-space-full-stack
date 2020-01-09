@@ -25,7 +25,8 @@
   }
 
   &__about{
-    background-color:$color-primary;
+    background-color:rgba($color-primary,0.95);
+    padding:0;
     z-index: 9999;
   }
 
@@ -35,6 +36,10 @@
   }
   &--width-small{
     width:calc(100% - #{$pages-width-large});
+  }
+
+  &--width-nav-bar{
+    width:15%;
   }
 
 

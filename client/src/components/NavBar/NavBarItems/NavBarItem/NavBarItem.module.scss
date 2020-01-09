@@ -2,46 +2,69 @@
 
 
 .NavBarItem{
+
   display:flex;
   align-items: center;
   text-transform: uppercase;
   height:100%;
 
-}
-.NavBarItem a{
-  padding: 1.5rem 0;
-  margin:0 1.5rem;
-  height:100%;
-  font-size: 1.5rem;
-  color:$color-primary-dark;
-  text-decoration: none;
-  display:block;
-  transition:border-color 0.3s ease, color 0.5s ease;
-  position:relative;
+  & a{
+    padding: 1.5rem 0;
+    margin:0 1.5rem;
+    height:100%;
+    font-size: 1.5rem;
+    color:$color-primary-dark;
+    text-decoration: none;
+    display:block;
+    transition:border-color 0.3s ease, color 0.5s ease;
+    position:relative;
 
-  &::before{
-    content:"";
-    position:absolute;
-    height:0.5rem;
-    top:4rem;
-    background-color: $color-primary-light-1;
-    width:0;
-    transition:.2s;
+
+    &::before{
+      content:"";
+      position:absolute;
+      height:0.5rem;
+      top:4rem;
+      background-color: $color-primary-light-1;
+      width:0;
+      transition:.2s;
+
+    }
+
+    &:hover,
+    &.active{
+      color:$color-black;
+
+      &::before{
+        width:100%;
+      }
+    }
+
+    &.active{
+      pointer-events: none;
+    }
+  }
+
+  &--about{
+    justify-content: center;
+
+    & a{
+      text-align: center;
+      height:auto;
+      flex:1 0 auto;
+
+      &:hover,
+      &.active{
+
+        &::before{
+          width:0;
+        }
+      }
+
+
+    }
 
   }
 
-}
-.NavBarItem a:hover,
-.NavBarItem a.active{
-  color:$color-black;
 
-  &::before{
-    width:100%;
-  }
-
-
-}
-
-.NavBarItem a.active{
-  pointer-events: none;
 }

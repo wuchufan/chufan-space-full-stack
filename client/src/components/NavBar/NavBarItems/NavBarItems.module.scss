@@ -8,7 +8,9 @@
   font-size: 1.6rem;
 
   &--about{
+
     flex-direction:column;
     justify-content: space-around;
+    flex:1 0 auto;
   }
 }

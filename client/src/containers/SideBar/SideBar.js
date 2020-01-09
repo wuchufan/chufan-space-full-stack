@@ -16,7 +16,7 @@ class SideBar extends Component{
 
       case '/about':
         sideBarWidth.push(
-          classes['side-bar--width-small'],
+          classes['side-bar--width-nav-bar'],
           classes['side-bar__about']
       );
         sideBarContentStyle.push(

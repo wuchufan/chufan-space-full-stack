@@ -1,18 +1,26 @@
-import React from 'react';
+import React,{Component} from 'react';
 import SideBar from '../../SideBar/SideBar';
 import NavBar from '../../../components/NavBar/NavBar';
 
 
 
-const sideBarLibrary=(props)=>{
-  return(
-    <SideBar>
-      <h1>This is Tetris</h1>
+class SideBarAbout extends Component{
 
-      <NavBar/>
-    </SideBar>
 
-  )
+  render(){
+    return(
+      <SideBar>
+
+
+        <h1>This is NavBar</h1>
+
+        <NavBar/>
+
+      </SideBar>
+
+    )
+  }
+
 }
 
-export default sideBarLibrary;
+export default SideBarAbout;
