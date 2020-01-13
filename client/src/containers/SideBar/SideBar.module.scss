@@ -7,9 +7,24 @@
   height:100vh;
   padding:$pages-padding;
   overflow-y:scroll;
+  overflow-x:hidden;
   background-color: transparent;
   color:$color-white;
   transition:all 1s ease;
+
+  &::-webkit-scrollbar {
+      transition:background-color 1s ease;
+      width: .5em;
+  }
+  &::-webkit-scrollbar-track {
+      -webkit-box-shadow: none;
+  }
+  &::-webkit-scrollbar-thumb {
+  background-color:$color-primary-dark;
+  border-radius: 10px;
+
+
+}
 
 
 
