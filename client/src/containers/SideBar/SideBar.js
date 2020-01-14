@@ -20,7 +20,7 @@ class SideBar extends Component{
       break;
 
       case '/about':
-
+      console.log(this.props.show);
         sideBarStyle.push(
           classes['side-bar--width-nav-bar'],
           classes['side-bar__about']

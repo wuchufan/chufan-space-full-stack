@@ -34,14 +34,14 @@ class HomePage extends Component{
                   Please do make yourself comfortable, roam around, I have put my work in here.
                 </p>
                 <p className={classes['home__message--paragraph']}>
-                  If you want to learn more about me, use this portal :)
+                  If you want to learn more about me, take this portal :)
                 </p>
                 <div className={classes['home__message--button']}>
-                <NavLink to='/about'>
-                  <Button type='text-2'>
-                    About me &rarr;
-                  </Button>
-                </NavLink>
+                  <NavLink to='/about'>
+                    <Button type='text-2'>
+                      About me &rarr;
+                    </Button>
+                  </NavLink>
                 </div>
               </div>
               <div className={classes['home__announcement']}>
@@ -49,7 +49,7 @@ class HomePage extends Component{
 
                 </figure>
                 <div className={classes['home__announcement--text']}>
-                  <h3 className={classes['home__announcememt--heading']}>Announcement:</h3>
+                  <h3 className={classes['home__announcememt--heading']}>What's new:</h3>
                   <p className={classes['home__announcement--content']}>
                     Meowster is currently working hard on expanding this universe. He is looking for ideas on what to add. Tell me by leaving a message, meow!
                   </p>
