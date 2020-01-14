@@ -7,6 +7,7 @@
   right:0;
   bottom:0;
   overflow-y:scroll;
+  overflow-x:hidden;
   padding:$pages-padding;
   transition: all 1s ease;
   background-color: $color-primary-light-2;
@@ -36,7 +37,17 @@
     rgba($color-primary-light-2,0.7)),
     url(../../assets/images/grk-b.jpg);
     background-size:cover;
-
+    &::-webkit-scrollbar {
+        transition:background-color 1s ease;
+        width: .6em;
+    }
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: none;
+    }
+    &::-webkit-scrollbar-thumb {
+    background-color:rgba($color-grey-dark,0.5);
+    border-radius: 10px;
+    }
 
   }
   &--width-large{

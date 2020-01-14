@@ -1,4 +1,6 @@
 import React,{Component} from 'react';
+import {compose} from 'redux';
+import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom';
 import classes from './SideBar.module.scss';
 
@@ -6,26 +8,34 @@ import classes from './SideBar.module.scss';
 class SideBar extends Component{
 
 
+
   render(){
-    let sideBarWidth=[classes['side-bar']]
-    let sideBarContentStyle = [classes['side-bar__content-box'],classes['row']]
+
+    let sideBarStyle=[classes['side-bar']];
+    let sideBarContentStyle = [classes['side-bar__content-box'],classes['row']];
+
     switch (this.props.location.pathname){
       case '/':
-        sideBarWidth.push(classes['side-bar--width-medium']);
+        sideBarStyle.push(classes['side-bar--width-medium']);
       break;
 
       case '/about':
-        sideBarWidth.push(
+
+        sideBarStyle.push(
           classes['side-bar--width-nav-bar'],
           classes['side-bar__about']
       );
         sideBarContentStyle.push(
           classes['side-bar__content-box--about']
         );
-        break;
+      if (!this.props.show){
+        sideBarStyle.push(classes['side-bar__about--not-show'])
+      }
+
+      break;
 
       case '/posts':
-      sideBarWidth.push(classes['side-bar--width-small']);
+      sideBarStyle.push(classes['side-bar--width-small']);
       break;
 
       case '/posts/' + this.props.match.params.id:
@@ -33,11 +43,11 @@ class SideBar extends Component{
       break;
 
       default:
-      sideBarWidth.push(classes['side-bar--width-medium']);
+      sideBarStyle.push(classes['side-bar--width-medium']);
       break;
     }
     return(
-      <div className={sideBarWidth.join(' ')}>
+      <div className={sideBarStyle.join(' ')}>
         <div className={sideBarContentStyle.join(' ')}>
           {this.props.children}
         </div>
@@ -45,6 +55,14 @@ class SideBar extends Component{
       }
 }
 
+const mapStateToProps = state => {
+  return {
+    show:state.ssb.checkShow
+  }
+}
 
 
-export default withRouter(SideBar);
+export default compose(
+  withRouter,
+  connect(mapStateToProps)
+)(SideBar);

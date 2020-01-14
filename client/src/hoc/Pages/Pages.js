@@ -1,9 +1,18 @@
 import React, {Component} from 'react';
 import {withRouter} from 'react-router-dom';
+import { compose } from 'redux';
+import { connect } from 'react-redux';
 import classes from './Pages.module.scss';
 import NavBar from '../../components/NavBar/NavBar';
+import * as actionTypes from '../../store/actions';
 
 class Pages extends Component {
+
+  mouseMoveAndCheck = (e) =>{
+    this.props.onMouseMove(e);
+    this.props.checkShowSideBar(this.props.x);
+  }
+
 
   render(){
     let pageStyle= [];
@@ -11,7 +20,7 @@ class Pages extends Component {
     let contentStyle = [classes['pages__content']];
 
 
-
+    //Styling component for different route
     switch (this.props.location.pathname){
       case '/':
         pageStyle.push(
@@ -51,12 +60,14 @@ class Pages extends Component {
     );
       break;
     }
+
     return(
-      <div className={pageStyle.join(' ')}>
+      <div className={pageStyle.join(' ')} onMouseMove={(e)=>this.mouseMoveAndCheck(e)}>
         <div className={classes['pages__container--inner']}>
+
           {navBar}
-          {/* <NavBar/> */}
           <div className={contentStyle.join(' ')} >
+
             {this.props.children}
           </div>
         </div>
@@ -65,4 +76,19 @@ class Pages extends Component {
   }
 };
 
-export default withRouter(Pages);
+const mapStateToProps = state => {
+  return{
+  x:state.msm.x,
+  show:state.ssb.showSideBar}
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    onMouseMove: (event) => dispatch({type:actionTypes.MOUSEMOVE, event:event}),
+    checkShowSideBar: (x) => dispatch({type:actionTypes.CHECKSHOW, x:x})
+  }
+};
+
+export default compose(
+withRouter,
+connect(mapStateToProps,mapDispatchToProps))(Pages);

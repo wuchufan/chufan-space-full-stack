@@ -6,7 +6,7 @@ import NavBar from '../../../components/NavBar/NavBar';
 
 class SideBarAbout extends Component{
 
-
+  
   render(){
     return(
       <SideBar>

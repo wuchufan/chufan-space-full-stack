@@ -1,34 +1,19 @@
 import React,{Component} from 'react';
-// import AboutNavBar from './AboutNavBar/AboutNavBar';
-// import AboutContent from './AboutContent/AboutContent';
+import { connect } from 'react-redux';
 import classes from './About.module.scss';
 import Pages from '../../hoc/Pages/Pages';
 
 class About extends Component{
-  state={
-    mouse:{
-      x:0,
-      y:0
-    }
-  }
-
-  onMouseMove = (e) =>{
-    this.setState({mouse:
-      { x: e.nativeEvent.offsetX,
-        y: e.nativeEvent.offsetY}
-    });
-  }
-
   render(){
     return (
       <Pages>
-        <section className={classes['section-about']} onMouseMove={(e)=>this.onMouseMove(e)}>
+        <section className={classes['section-about']}>
           <div className={classes['content']}>
             <h1>
               This is about
             </h1>
             <h1>
-              Mouse coordinate:{this.state.mouse.x},{this.state.mouse.y}
+              Mouse coordinate:{this.props.x},{this.props.y}
             </h1>
           </div>
         </section>
@@ -37,4 +22,11 @@ class About extends Component{
   }
 }
 
-export default About;
+const mapStateToProps = state =>{
+  return{
+    x:state.msm.x,
+    y:state.msm.y
+  }
+}
+
+export default connect(mapStateToProps)(About);

@@ -14,7 +14,7 @@ class NavBar extends Component {
       default:
       break;
     }
-    console.log(this.props);
+
     return(
       <React.Fragment>
         <nav className={navBarStyle.join(' ')}>
