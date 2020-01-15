@@ -14,7 +14,6 @@
   min-height: 100vh;
 
   &::-webkit-scrollbar {
-      transition:background-color 1s ease;
       width: .5em;
   }
   &::-webkit-scrollbar-track {
@@ -23,26 +22,19 @@
   &::-webkit-scrollbar-thumb {
   background-color:$color-primary-light-1;
   border-radius: 10px;
-
-
-}
+    }
 
   }
 
   &__about{
     padding:4rem;
-    background-image:
-    linear-gradient(to right bottom,
-    rgba($color-primary-light-2,0.7),
-    rgba($color-primary-light-2,0.7)),
-    url(../../assets/images/grk-b.jpg);
-    background-size:cover;
+    background-color: transparent;
     &::-webkit-scrollbar {
-        transition:background-color 1s ease;
-        width: .6em;
+        width: 0em;
     }
     &::-webkit-scrollbar-track {
         -webkit-box-shadow: none;
+        background-color: transparent;
     }
     &::-webkit-scrollbar-thumb {
     background-color:rgba($color-grey-dark,0.5);

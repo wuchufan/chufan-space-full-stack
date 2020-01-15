@@ -49,7 +49,7 @@ class SideBarHomePage extends Component{
 
           <div className={classes['home__message-box']}>
             <div className={classes['u-margin-bottom-medium']}>
-              <Input placeholder='This quantum entangled channel is not implemented yet.'
+              <Input placeholder='Message delievery channel is not yet entangled.'
                 elementType={'textarea'} className={'textarea--main'}/>
             </div>
 

@@ -1,15 +1,12 @@
 @import '../../sass/main.module.scss';
 
 .section-about{
+  margin:0 auto;
   min-height:100vh;
-
-  border-top:.5rem solid rgba($color-primary-light-1,.8);
+  // max-width:114rem;
+  // width:70%;
+  background-color: rgba($color-primary-light-2,0.5);
+  // border-top:1rem solid rgba($color-primary-light-1,.8);
   padding:4rem;
   font-size: 1.5rem;
-}
-
-.skills{
-  &__list{
-    list-style:none;
-  }
 }

@@ -10,8 +10,8 @@ const reducer = (state = initialState, action) => {
   switch (action.type){
     case actionTypes.MOUSEMOVE:
     return {...state,
-      x:action.event.nativeEvent.offsetX,
-      y:action.event.nativeEvent.offsetY}
+      x:action.event.nativeEvent.clientX,
+      y:action.event.nativeEvent.clientY}
     default:
     return state
   }

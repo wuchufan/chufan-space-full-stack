@@ -1,0 +1,20 @@
+@import '../../sass/main.module.scss';
+
+.block{
+  margin-bottom:8rem;
+  background-color: rgba($color-white,1);
+  padding:$homepage-block-padding;
+  box-shadow:0 1rem 1rem $color-grey-light-2;
+  border-radius:10px;
+  font-weight:100;
+  font-size:$homepage-block-font;
+
+  &--about{
+    margin-bottom:8rem;
+    background-color: rgba($color-white,1);
+    padding:$homepage-block-padding;
+    border-radius:10px;
+
+
+  }
+}

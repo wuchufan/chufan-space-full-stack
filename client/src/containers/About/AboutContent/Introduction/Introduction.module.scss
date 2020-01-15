@@ -1,0 +1,12 @@
+@import '../../../../sass/main.module.scss';
+
+.introduction{
+  @include aboutBlock
+}
+
+.figure{
+  &__my-pic{
+    width:15rem;
+    height:auto;
+  }
+}

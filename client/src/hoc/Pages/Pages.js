@@ -67,7 +67,7 @@ class Pages extends Component {
 
           {navBar}
           <div className={contentStyle.join(' ')} >
-
+        
             {this.props.children}
           </div>
         </div>

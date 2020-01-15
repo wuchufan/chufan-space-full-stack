@@ -1,0 +1,22 @@
+@import '../../../sass/main.module.scss';
+
+
+.section-about{
+  margin:0 auto;
+  display:flex;
+  flex-direction: column;
+  min-height:100vh;
+  font-size: 1.5rem;
+
+  // & > div {
+  //   width:80%;
+  //
+  //   &:nth-child(even){
+  //     align-self: flex-end;
+  //     margin-right:7rem;
+  //
+  //   }
+  //
+  // }
+
+}

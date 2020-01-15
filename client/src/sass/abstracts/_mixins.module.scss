@@ -6,6 +6,20 @@
   }
 }
 
+@mixin center{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+
+@mixin aboutBlock{
+  margin-bottom:8rem;
+  background-color: rgba($color-white,1);
+  padding:$homepage-block-padding;
+  border-radius:10px;
+}
+
 
 //MEDIA QUERY MANAGER
 /*

@@ -9,7 +9,7 @@ const sideBarPosts=(props)=>{
 
   return(
     <SideBar>
-      <SideBarLayout title='Posts'>
+      <SideBarLayout title='Articles'>
         <p>
           <span>
             This is where meowster posts his little articles.
@@ -17,7 +17,7 @@ const sideBarPosts=(props)=>{
         </p>
       </SideBarLayout>
 
-      
+
     </SideBar>
 
   )

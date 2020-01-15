@@ -1,0 +1,18 @@
+@import '../../../../sass/main.module.scss';
+
+.skills{
+  display:flex;
+  flex-direction:column;
+  &__list{
+    list-style:none;
+  }
+  
+  &__education{
+    @include aboutBlock
+  }
+
+  &__technical{
+    @include aboutBlock
+  }
+
+}
