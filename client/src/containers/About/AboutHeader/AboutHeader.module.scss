@@ -3,7 +3,7 @@
     height:95vh;
     background-color: transparent;
     margin-bottom: 4rem;
-    
+
     &__text-box{
       @include center
     }
@@ -11,5 +11,8 @@
     &__text{
       color:$color-white;
       font-size:6rem;
+      @include nth-animation(3)
+      // animation:shrinkFont 200ms ease 9000ms;
+      // animation-fill-mode:forwards;
     }
   }

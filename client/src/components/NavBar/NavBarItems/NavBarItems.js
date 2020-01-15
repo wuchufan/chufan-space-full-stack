@@ -14,7 +14,7 @@ const navBarItems=(props)=>{
   return(
     <ul className={NavBarItemsStyle.join(' ')}>
       <NavBarItem link='/'>Home</NavBarItem>
-      <NavBarItem link='/posts'>Articles</NavBarItem>
+      <NavBarItem link='/posts'>Blogs</NavBarItem>
       <NavBarItem link='/library'>Library</NavBarItem>
       <NavBarItem link='/about'>About Me</NavBarItem>
     </ul>

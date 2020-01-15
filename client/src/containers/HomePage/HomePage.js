@@ -27,14 +27,16 @@ class HomePage extends Component{
 
                 <p className={classes['home__message--paragraph']}>
 
-                  I'm a physics student graduated from University of Toronto.
+                  I'm a physics specialist graduated from University of Toronto.
                 </p>
                 <p className={classes['home__message--paragraph']}>
-                  I'm currently away from home. I had imformed Schrodinger to take care of any incidants.
-                  Please do make yourself comfortable, roam around, I have put my work in here.
+                  I created this space to share inspiration and perhaps keep track of the trajectory of my journey in life.
                 </p>
                 <p className={classes['home__message--paragraph']}>
-                  If you want to learn more about me, take this portal :)
+                  I'm currently away from home, but I've told Schrodinger to take care of any incidants. 
+                </p>
+                <p className={classes['home__message--paragraph']}>
+                  Roam around, and make yourself comfortable, I've put my work in here. If you want to learn more about me, take this portal :)
                 </p>
                 <div className={classes['home__message--button']}>
                   <NavLink to='/about'>

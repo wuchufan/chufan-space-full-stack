@@ -20,6 +20,16 @@
   border-radius:10px;
 }
 
+@mixin nth-animation($n){
+  @for $i from 1 through $n{
+    &:nth-child(#{$i}){
+      animation:fadeIn $animation-fade-in-time ease calc(700ms * #{$i}),shrinkFont 2000ms ease calc(#{$n} * 700ms + #{$animation-fade-in-time});
+      animation-fill-mode:both,forwards;
+    }
+  }
+
+}
+
 
 //MEDIA QUERY MANAGER
 /*
