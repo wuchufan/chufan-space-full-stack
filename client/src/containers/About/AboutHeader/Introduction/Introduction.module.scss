@@ -1,7 +1,11 @@
 @import '../../../../sass/main.module.scss';
 
-.introduction{
+.intro{
+  
   @include aboutBlock
+  &__text{
+    font-weight:100;
+  }
 }
 
 .figure{

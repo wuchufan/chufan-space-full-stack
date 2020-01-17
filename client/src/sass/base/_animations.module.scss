@@ -67,6 +67,30 @@
   100%{
     font-size:4rem;
   }
+}
 
+@keyframes fromCenter{
+  0%{
+    top:50vh;
+    left:50%;
+    transform:translate(-50%,-50%);
+  }
+}
+
+
+@keyframes heightFullView{
+
+  0%{
+    height:100vh;
+  }
+}
+
+@keyframes displayNone{
+  0%{
+    opacity:0;
+    height:0;
+    overflow:hidden;
+    transform:translateY(100%);
+  }
 
 }

@@ -45,7 +45,17 @@ $animation-move-right-medium-delay:moveInRight 1200ms ease-out 550ms;
 $animation-move-up-short-delay:moveInUp 1200ms ease-out 350ms;
 $animation-move-up-medium-delay:moveInUp 1200ms ease-out 550ms;
 $animation-move-down-medium-delay:moveInBottom 1200ms ease-out 550ms;
-$animation-fade-in-time:2000ms; 
+//ANIMATION - about
+$heading-sentence:3;
+$fade-in-time:2000ms;
+$shrink-total-time:2000ms;
+$fade-in-delay-time:700ms;
+$shrink-delay-time-1:$fade-in-delay-time;
+$shrink-delay-time-2:$fade-in-time;
+$move-left-total-time:$shrink-total-time;
+$move-left-delay-time-1:$fade-in-delay-time;
+$move-left-delay-time-2:$fade-in-time;
+
 
 //GRID
 $grid-width:114rem;

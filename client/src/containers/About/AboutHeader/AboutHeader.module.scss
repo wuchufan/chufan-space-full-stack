@@ -1,18 +1,33 @@
 @import '../../../sass/main.module.scss';
+
+
   .header{
-    height:95vh;
+    position:relative;
+    height:auto;
     background-color: transparent;
     margin-bottom: 4rem;
+    display:flex;
+    flex-direction:row;
+    justify-content: flex-end;
+  }
 
-    &__text-box{
-      @include center
-    }
+  .text-box{
+    position:absolute;
+    top:0;
+    left:0;
+    transform:translate(0,0);
+    @include about-text-box($heading-sentence)
 
     &__text{
       color:$color-white;
       font-size:6rem;
-      @include nth-animation(3)
-      // animation:shrinkFont 200ms ease 9000ms;
-      // animation-fill-mode:forwards;
+      @include about-text($heading-sentence)
+
     }
+  }
+
+  .intro{
+    flex:0 1 50%;
+    @include about-intro($heading-sentence)
+
   }

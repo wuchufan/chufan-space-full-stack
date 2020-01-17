@@ -20,17 +20,36 @@
   border-radius:10px;
 }
 
-@mixin nth-animation($n){
+//Animation - About
+@mixin about-text($n){
   @for $i from 1 through $n{
     &:nth-child(#{$i}){
-      animation:fadeIn $animation-fade-in-time ease calc(700ms * #{$i}),shrinkFont 2000ms ease calc(#{$n} * 700ms + #{$animation-fade-in-time});
+      animation:fadeIn $fade-in-time ease calc(#{$fade-in-delay-time} * #{$i}),
+      shrinkFont $shrink-total-time ease calc(#{$n} * #{$shrink-delay-time-1} + #{$shrink-delay-time-2});
       animation-fill-mode:both,forwards;
     }
   }
-
 }
 
+@mixin about-text-box($n){
+  animation:fromCenter $move-left-total-time ease calc(#{$n} * #{$move-left-delay-time-1} + #{$move-left-delay-time-2});
+  animation-fill-mode:backwards;
+}
 
+@mixin about-intro($n){
+  animation:moveInRight $move-left-total-time ease calc(#{$n} * #{$move-left-delay-time-1} + #{$move-left-delay-time-2});
+  animation-fill-mode:backwards;
+}
+
+@mixin about-header($n){
+  animation:heightFullView $move-left-total-time ease calc(#{$n} * #{$move-left-delay-time-1} + #{$move-left-delay-time-2});
+  animation-fill-mode:both;
+}
+
+@mixin about-section($n){
+  animation:displayNone $move-left-total-time ease calc(#{$n} * #{$move-left-delay-time-1} + #{$move-left-delay-time-2});
+  animation-fill-mode:backwards;
+}
 //MEDIA QUERY MANAGER
 /*
 0 - 600px: Phone
