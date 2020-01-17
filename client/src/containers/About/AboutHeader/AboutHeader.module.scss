@@ -13,9 +13,9 @@
 
   .text-box{
     position:absolute;
-    top:0;
+    top:40%;
     left:0;
-    transform:translate(0,0);
+    transform:translate(0,-50%);
     @include about-text-box($heading-sentence)
 
     &__text{
