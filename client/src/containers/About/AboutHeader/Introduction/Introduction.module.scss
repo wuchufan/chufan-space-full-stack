@@ -1,15 +1,29 @@
 @import '../../../../sass/main.module.scss';
 
-.intro{
-  
+.block-intro{
+
   @include aboutBlock
+  padding-top:2rem;
+}
+
+
+
+
+.intro{
   &__text{
+    font-size: 2rem;
     font-weight:100;
+    line-height:2;
   }
 }
 
+
 .figure{
   &__my-pic{
+
+    float:left;
+    -webkit-clip-path:circle(40%);
+    // clip-path:
     width:15rem;
     height:auto;
   }

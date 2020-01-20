@@ -37,19 +37,26 @@
 }
 
 @mixin about-intro($n){
-  animation:moveInRight $move-left-total-time ease calc(#{$n} * #{$move-left-delay-time-1} + #{$move-left-delay-time-2});
+  animation:moveInLeft $move-left-total-time ease calc(#{$n} * #{$move-left-delay-time-1} + #{$move-left-delay-time-2});
   animation-fill-mode:backwards;
 }
 
 @mixin about-header($n){
   animation:heightFullView $move-left-total-time ease calc(#{$n} * #{$move-left-delay-time-1} + #{$move-left-delay-time-2});
   animation-fill-mode:both;
+
 }
 
+@mixin about-text-block($n){
+  animation:moveInRight $move-left-total-time ease calc(#{$n} * #{$move-left-delay-time-1} + #{$move-left-delay-time-2} + 500ms);
+  animation-fill-mode:both;
+}
 @mixin about-section($n){
   animation:displayNone $move-left-total-time ease calc(#{$n} * #{$move-left-delay-time-1} + #{$move-left-delay-time-2});
   animation-fill-mode:backwards;
 }
+
+
 //MEDIA QUERY MANAGER
 /*
 0 - 600px: Phone

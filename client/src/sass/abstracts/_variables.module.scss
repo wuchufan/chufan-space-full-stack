@@ -46,10 +46,10 @@ $animation-move-up-short-delay:moveInUp 1200ms ease-out 350ms;
 $animation-move-up-medium-delay:moveInUp 1200ms ease-out 550ms;
 $animation-move-down-medium-delay:moveInBottom 1200ms ease-out 550ms;
 //ANIMATION - about
-$heading-sentence:4;
+$heading-sentence:3;
 $fade-in-time:2000ms;
-$shrink-total-time:2000ms;
-$fade-in-delay-time:700ms;
+$shrink-total-time:1000ms;
+$fade-in-delay-time:1000ms;
 $shrink-delay-time-1:$fade-in-delay-time;
 $shrink-delay-time-2:$fade-in-time;
 $move-left-total-time:$shrink-total-time;

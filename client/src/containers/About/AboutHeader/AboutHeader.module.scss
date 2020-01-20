@@ -8,24 +8,41 @@
     margin-bottom: 4rem;
     display:flex;
     flex-direction:row;
-    justify-content: flex-end;
+    justify-content: space-between;
   }
 
   .text-box{
     position:absolute;
-    top:40%;
-    left:0;
-    transform:translate(0,-50%);
+    top:0;
+    left:60%;
+    transform:translate(0,0);
     @include about-text-box($heading-sentence)
 
     &__text{
       color:$color-white;
-      font-size:6rem;
+      font-weight:100;
+      font-size:5rem;
       @include about-text($heading-sentence)
+
+      &--name{
+        font-weight:900;
+
+      }
 
     }
   }
+  .text-block{
+    align-self: flex-end;
 
+    flex:0 1 43%;
+    @include aboutBlock
+    @include about-text-block($heading-sentence)
+    // background-color:transparent;
+    &__text{
+      font-weight:100;
+      font-size:1.6rem;
+    }
+  }
   .intro{
     flex:0 1 50%;
     @include about-intro($heading-sentence)

@@ -1,12 +1,9 @@
 @import '../../../../sass/main.module.scss';
 
-.skills{
-  display:flex;
-  flex-direction:column;
+.education{
   @include aboutBlock
+
   &__list{
     list-style:none;
   }
-
-
 }
