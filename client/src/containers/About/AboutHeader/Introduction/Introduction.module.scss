@@ -13,18 +13,20 @@
   &__text{
     font-size: 2rem;
     font-weight:100;
-    line-height:2;
+
   }
 }
 
 
 .figure{
   &__my-pic{
-
+    position:relative;
     float:left;
-    -webkit-clip-path:circle(40%);
-    // clip-path:
-    width:15rem;
-    height:auto;
+    -webkit-clip-path:circle(40% at 60% 50%);
+    clip-path:circle(40% at 60% 50%);
+    -webkit-shape-outside:circle(40% at 63% 50%);
+    shape-outside:circle(40% at 63% 50%);
+    transform:translateX(-2rem);
+    width:20rem;
   }
 }

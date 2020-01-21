@@ -11,9 +11,9 @@ const introduction = (props) => {
             classes['heading__title']].join(' ')}>About me</h1>
         </div>
         <div className={classes['containp']}>
-          <div className={classes['figure']}>
+          <figure className={classes['figure']}>
             <img className={classes['figure__my-pic']} src={chufan} alt="chufan"></img>
-          </div>
+          </figure>
           <div className={classes['intro']}>
 
             <p className={classes['intro__text']}>Hello, My name is Chufan Wu.

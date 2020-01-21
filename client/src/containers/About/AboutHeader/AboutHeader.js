@@ -7,7 +7,7 @@ const aboutHeader = (props) => {
 
   return(
     <header className={classes['header']}>
-
+      
       <div className={classes['text-box']}>
         <h1 className={classes['text-box__text']}>My name is <span className={classes['text-box__text--name']}>Chufan Wu</span>.</h1>
         <h1 className={classes['text-box__text']}>I learn stuff.</h1>
