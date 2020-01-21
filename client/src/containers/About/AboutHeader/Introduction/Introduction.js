@@ -5,12 +5,12 @@ import classes from './Introduction.module.scss';
 const introduction = (props) => {
   return (
 
-      <div className={classes['block-intro']}>
+    <React.Fragment>
         <div className={classes['heading']}>
           <h1 className={[classes['heading-primary--about'],
             classes['heading__title']].join(' ')}>About me</h1>
         </div>
-        <div className={classes['containp']}>
+        <div className={classes['content']}>
           <figure className={classes['figure']}>
             <img className={classes['figure__my-pic']} src={chufan} alt="chufan"></img>
           </figure>
@@ -22,8 +22,7 @@ const introduction = (props) => {
 
           </div>
         </div>
-      </div>
-
+    </React.Fragment>
   )
 };
 

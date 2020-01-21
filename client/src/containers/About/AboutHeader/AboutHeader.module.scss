@@ -11,11 +11,12 @@
     justify-content: space-between;
   }
 
-  .text-box{
+  .heading-box{
     position:absolute;
     top:0;
     left:60%;
     transform:translate(0,0);
+
     @include about-text-box($heading-sentence)
 
     &__text{
@@ -30,21 +31,28 @@
       }
 
     }
+
+
   }
   .text-block{
     align-self: flex-end;
-
     flex:0 1 45%;
     @include aboutBlock
     @include about-text-block($heading-sentence)
-    // background-color:transparent;
     &__text{
       font-weight:100;
       font-size:1.6rem;
     }
+    transition:$block-transition;
+    @include about-hover
+
   }
   .intro{
+
     flex:0 1 45%;
     @include about-intro($heading-sentence)
-
+    @include aboutBlock
+    padding-top:2rem;
+    transition:$block-transition;
+    @include about-hover
   }

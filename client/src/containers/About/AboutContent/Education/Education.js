@@ -4,7 +4,8 @@ import classes from './Education.module.scss';
 const education = (props) =>{
   return(
     <div className={classes['education']}>
-      <h1>The physics courses I took were:</h1>
+      <h1 className={classes['heading-primary--about']}>Education</h1>
+      <h1>Physics courses:</h1>
       <ul className={classes['education__list']}>
         <li>Classical Mechanics</li>
         <li>Quantum Mechanics</li>

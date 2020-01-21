@@ -1,12 +1,25 @@
 @import '../../../../sass/main.module.scss';
 
+.skills-section{
+
+  @include aboutBlock
+  @include about-hover
+  transition:$block-transition;
+}
+
 .skills{
   display:flex;
-  flex-direction:column;
-  @include aboutBlock
+  flex-direction:row;
+
   &__list{
     list-style:none;
   }
 
+  &__webdev{
+    flex:0 1 50%;
+  }
 
+  &__physics{
+    flex:0 1 50%;
+  }
 }

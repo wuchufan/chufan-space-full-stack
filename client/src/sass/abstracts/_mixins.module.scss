@@ -12,7 +12,7 @@
   left:50%;
   transform:translate(-50%,-50%);
 }
-
+//Styling - About
 @mixin aboutBlock{
   margin-bottom:8rem;
   background-color: rgba($color-white,1);
@@ -49,11 +49,20 @@
 
 @mixin about-text-block($n){
   animation:moveInRight $move-left-total-time ease calc(#{$n} * #{$move-left-delay-time-1} + #{$move-left-delay-time-2} + 500ms);
-  animation-fill-mode:both;
+  animation-fill-mode:backwards;
 }
 @mixin about-section($n){
   animation:displayNone $move-left-total-time ease calc(#{$n} * #{$move-left-delay-time-1} + #{$move-left-delay-time-2});
   animation-fill-mode:backwards;
+}
+
+//Hover - About
+@mixin about-hover{
+  &:hover{
+    transform:scale(1.05);
+    box-shadow:2px 2px 1rem $color-primary-light-2;
+
+  }
 }
 
 

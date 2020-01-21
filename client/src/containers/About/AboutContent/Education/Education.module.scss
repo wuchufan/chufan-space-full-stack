@@ -6,4 +6,6 @@
   &__list{
     list-style:none;
   }
+  @include about-hover
+  transition:$block-transition;
 }

@@ -1,13 +1,5 @@
 @import '../../../../sass/main.module.scss';
 
-.block-intro{
-
-  @include aboutBlock
-  padding-top:2rem;
-}
-
-
-
 
 .intro{
   &__text{
