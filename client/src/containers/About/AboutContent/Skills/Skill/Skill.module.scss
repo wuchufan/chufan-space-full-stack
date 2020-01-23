@@ -1,9 +1,15 @@
 .skill-box{
-  &:hover .detail-box{
-    display:block;
-  }
+  position:relative;
+  margin-bottom: 1rem;
 }
 
 .detail-box{
+  display:none;
+  position:absolute;
+  z-index:1;
+  background-color:red;
+}
+
+.active{
   display:block;
 }

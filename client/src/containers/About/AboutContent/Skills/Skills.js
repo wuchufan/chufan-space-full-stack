@@ -1,12 +1,12 @@
 import React,{Component} from 'react';
 import classes from './Skills.module.scss';
-import {skillType} from './SkillsIndex';
+import {skillType} from './SkillsAppendix';
 import Skill from './Skill/Skill';
 
 class Skills extends Component{
   state = {skillType}
 
-  
+
   getSkills = (obj) => {
     let transObj = Object.keys(obj)
     .map((skill,index) => {
@@ -25,7 +25,6 @@ class Skills extends Component{
   render(){
 
     let webDev = this.getSkills(this.state.skillType.webDev);
-    console.log(webDev);
   return(
     <div className={classes['skills-section']}>
 
