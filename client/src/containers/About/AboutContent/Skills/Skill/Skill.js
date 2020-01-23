@@ -1,13 +1,16 @@
 import React from 'react';
 import classes from './Skill.module.scss';
-import Items from './Items/Items';
+import Item from './Item/Item';
 
 
 const skillItems = (props) => {
+  let details = props.details;
   return(
-  <li>
+  <li className={classes['skill-box']}>
     {props.children}
-    <Items/>
+    <ul className={classes['detail-box']}>
+      <Item>{details}</Item>
+    </ul>
   </li>
   )
 }

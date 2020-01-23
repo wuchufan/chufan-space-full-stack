@@ -1,6 +1,6 @@
 export const skillType = {
   webDev:{
-  HTML:null,
+  HTML:['Canvas'],
   CSS:['Float layout', 'Flexbox layout', 'Grid layout', 'responsive design']
 
   // Bootstrap,

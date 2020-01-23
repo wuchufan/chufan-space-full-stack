@@ -1,0 +1,9 @@
+.skill-box{
+  &:hover .detail-box{
+    display:block;
+  }
+}
+
+.detail-box{
+  display:block;
+}

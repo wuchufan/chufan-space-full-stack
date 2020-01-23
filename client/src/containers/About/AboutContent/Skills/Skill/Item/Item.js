@@ -4,7 +4,7 @@ import classes from './Item.module.scss';
 
 const item = (props) => {
   return(
-    <li>{props.children}</li>
+    <li className={classes['item']}>{props.children}</li>
   )
 };
 

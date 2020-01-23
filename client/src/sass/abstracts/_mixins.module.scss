@@ -59,8 +59,8 @@
 //Hover - About
 @mixin about-hover{
   &:hover{
-    transform:scale(1.05);
-    box-shadow:2px 2px 1rem $color-primary-light-2;
+    transform:scale(1.03);
+    box-shadow:2px 2px .5rem $color-primary-light-2;
 
   }
 }
