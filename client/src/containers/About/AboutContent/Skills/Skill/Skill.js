@@ -15,11 +15,11 @@ render(){
 
     <h1>{this.props.children}</h1>
     <ul className={
-      this.props.active
-      
-        ? [classes['detail-box'],classes['active']].join(' ')
-        : classes['detail-box']
-    }>
+        this.props.active
+
+          ? [classes['detail-box'],classes['active']].join(' ')
+          : classes['detail-box']
+      }>
       {details}
     </ul>
   </li>
