@@ -1,0 +1,21 @@
+{
+  "webDev":{
+  "HTML":["Canvas","etc"],
+  "CSS":["Float layout", "Flexbox layout", "Grid layout", "responsive design","Animation etc"],
+  "Bootstrap":["Grid","etc"],
+  "SCSS":[],
+  "Javascript":["Object oriented javascript","closure","scope chain","promise","etc..."],
+  "JQuery":[],
+  "ReactJs":["React router","redux","Animation"],
+  "NodeJs":["Express"],
+  "Mongodb":["Mongoose"],
+  "Version control":["Git"],
+  "Npm packages":[],
+  "Bash command line":[]
+
+  },
+  "physics":{
+    "Data analysis using python, C/C++":[]
+  }
+
+}

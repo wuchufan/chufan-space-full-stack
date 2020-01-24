@@ -3,27 +3,20 @@ import classes from './Skill.module.scss';
 import Item from './Item/Item';
 
 
-class SkillItems extends Component{
-  state={
-    show:false
-  }
+class Skill extends Component{
 
-
-  showDetailHandler = () => {
-
-    this.setState({show:!this.state.show})
-  }
 render(){
   let details = this.props.details
   .map((detail,index)=>(<Item key={index}>{detail}</Item>));
 
 
-
   return(
-  <li className={classes['skill-box']} onClick={()=> this.showDetailHandler()}>
-    {this.props.children}
+  <li className={classes['skill-box']} onClick={this.props.clicked}>
+
+    <h1>{this.props.children}</h1>
     <ul className={
-      this.state.show
+      this.props.active
+      
         ? [classes['detail-box'],classes['active']].join(' ')
         : classes['detail-box']
     }>
@@ -34,4 +27,4 @@ render(){
   }
 }
 
-export default SkillItems;
+export default Skill;

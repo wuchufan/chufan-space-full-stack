@@ -1,5 +1,7 @@
 import * as actionTypes from '../actions';
 
+
+//This is to check whether should show aboutpage sidebar
 const initialState = {
   checkShow:false
 }
