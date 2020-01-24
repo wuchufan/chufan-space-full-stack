@@ -12,19 +12,15 @@ class Skills extends Component{
   itemClickedHanlder = (index,type) => {
     for (let i in skillType){
       if (i === type){
-        if (this.state.activeIndex !== index){
+        if (this.state.activeIndex !== index || this.state.activeType !== type){
           //before it was nothing or not clicking the same thing
           this.setState({activeIndex:index, activeType:type});
         } else {
-          if (this.state.activeType !== type){
-            //clicked the same row but in different type
-            this.setState({activeIndex:index, activeType:type});
-          } else{
+
             //clicked the same thing
             //make it inactive
-            console.log(21);
             this.setState({activeIndex:null, activeType:null});
-          }
+
 
         }
       }
