@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import Model from '../../components/UI/Model/Model';
-import Aux from '../Aux/Aux';
+
 
 const withErrorHandler=(WrappedComponent, axios)=>{
 
@@ -31,11 +31,11 @@ const withErrorHandler=(WrappedComponent, axios)=>{
 
     render(){
       return(
-        <Aux>
+        <React.Fragment>
 
           <WrappedComponent {...this.props}/>
           <Model show={this.state.error}>{this.state.error? this.state.error.message: null}</Model>
-        </Aux>
+        </React.Fragment>
       );
     }
   }

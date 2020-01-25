@@ -1,6 +1,5 @@
 import React,{Component} from 'react';
 import {NavLink} from 'react-router-dom';
-import Aux from '../../hoc/Aux/Aux';
 import Button from '../../components/UI/Button/Button';
 import Pages from '../../hoc/Pages/Pages';
 import 'katex/dist/katex.min.css';
@@ -11,7 +10,7 @@ class HomePage extends Component{
   render(){
 
     return(
-      <Aux>
+      <React.Fragment>
         <Pages>
 
 
@@ -33,7 +32,7 @@ class HomePage extends Component{
                   I created this space to share inspiration and perhaps keep track of the trajectory of my journey in life.
                 </p>
                 <p className={classes['home__message--paragraph']}>
-                  I'm currently away from home, but I've told Schrodinger to take care of any incidants. 
+                  I'm currently away from home, but I've told Schrodinger to take care of any incidants.
                 </p>
                 <p className={classes['home__message--paragraph']}>
                   Roam around, and make yourself comfortable, I've put my work in here. If you want to learn more about me, take this portal :)
@@ -61,8 +60,8 @@ class HomePage extends Component{
 
             </section>
           </div>
-            </Pages>
-      </Aux>
+        </Pages>
+      </React.Fragment>
 
     );
   }

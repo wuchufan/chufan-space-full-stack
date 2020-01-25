@@ -14,23 +14,23 @@ import SideBarPosts from '../../containers/SideBar/SideBarPosts/SideBarPosts';
 import SideBarLibrary from '../../containers/SideBar/SideBarLibrary/SideBarLibrary';
 import SideBarAbout from '../../containers/SideBar/SideBarAbout/SideBarAbout';
 import Background from '../../components/Background/Background';
-import Aux from '../Aux/Aux';
+
 
 class Layout extends Component {
 
   render() {
 
-    return (<Aux>
+    return (<React.Fragment>
       <Background/>
       <main className={classes['main']}>
 
         <Route render={({location}) => {
-          return (<Aux>
+          return (<React.Fragment>
             {/* SideBar */}
             <TransitionGroup >
               <CSSTransition key={location.key} timeout={{
-                enter: 200,
-                exit: 300
+                  enter: 200,
+                  exit: 300
               }} classNames={fade} unmountOnExit>
 
                 <Switch location={location}>
@@ -57,13 +57,13 @@ class Layout extends Component {
                   <Route path='/' exact component={HomePage}/>
                 </Switch>
 
-                </CSSTransition>
-              </TransitionGroup>
-            </Aux>);
-          }}/>
+              </CSSTransition>
+            </TransitionGroup>
+          </React.Fragment>);
+        }}/>
 
       </main>
-    </Aux>);
+    </React.Fragment>);
   }
 }
 

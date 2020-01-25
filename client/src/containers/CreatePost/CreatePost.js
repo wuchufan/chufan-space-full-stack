@@ -4,7 +4,7 @@ import Button from '../../components/UI/Button/Button';
 import Pages from '../..//hoc/Pages/Pages';
 import classes from './CreatePost.module.scss';
 import axios from '../../axios-instance';
-import Aux from '../../hoc/Aux/Aux';
+
 
 class CreatePost extends Component {
   state = {
@@ -74,15 +74,15 @@ class CreatePost extends Component {
           <Button type="btn">Submit</Button>
         </div>
     </form>);
-    return (<Aux>
+    return (<React.Fragment>
       <Pages>
 
 
         <div>
-        {form}
-      </div>
+          {form}
+        </div>
       </Pages>
-    </Aux>);
+    </React.Fragment>);
   }
 }
 

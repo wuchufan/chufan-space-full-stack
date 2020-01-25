@@ -51,6 +51,7 @@ class Skills extends Component{
           })
           )
         }
+        return type
 
 
     });
