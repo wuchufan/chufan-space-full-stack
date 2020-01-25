@@ -21,7 +21,6 @@ class Skills extends Component{
             //make it inactive
             this.setState({activeIndex:null, activeType:null});
 
-
         }
       }
     }
@@ -34,13 +33,14 @@ class Skills extends Component{
     .map((type) => {
         if (renderType === type){
           //type -> webDev, physics
+
           let skills = Object.keys(skillType[type]) //->[HTML,CSS,...]
           //skillType[skill] -> HTML
-
+          console.log(skills);
 
           return(skills.map((skill,index)=>{
             let details = skillType[type][skill]
-
+            console.log('skill:',skill);
             return (<Skill
               clicked={()=>this.itemClickedHanlder(index,type)}
               active={this.state.activeIndex === index && this.state.activeType === type}
@@ -51,7 +51,7 @@ class Skills extends Component{
           })
           )
         }
-        return type
+        return null
 
 
     });
@@ -71,6 +71,7 @@ class Skills extends Component{
           <h2>Web development</h2>
           <ul className={classes['skills__list']}>
             {this.getSkills('webDev')}
+
           </ul>
         </div>
         <div className={classes['skills__physics']}>

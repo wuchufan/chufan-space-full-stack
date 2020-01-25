@@ -15,7 +15,7 @@
     "Grid",
     "etc"
   ],
-  "SCSS":[],
+  "SCSS":["variables"],
   "Javascript":[
     "Object oriented javascript",
     "closure",
@@ -23,7 +23,7 @@
     "promise",
     "etc..."
   ],
-  "JQuery":[],
+  "JQuery":["read documentation"],
   "ReactJs":[
     "React router",
     "redux",
