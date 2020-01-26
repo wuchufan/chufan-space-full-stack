@@ -15,9 +15,9 @@
 //Styling - About
 @mixin aboutBlock{
   margin-bottom:8rem;
-  background-color: rgba($color-white,1);
+  background-color: #f2feff;
   padding:$homepage-block-padding;
-  border-radius:10px;
+  border-radius:5px;
 }
 
 //Animation - About
@@ -59,8 +59,9 @@
 //Hover - About
 @mixin about-hover{
   &:hover{
-    transform:scale(1.02);
-    box-shadow:2px 2px .5rem rgba($color-primary-light-2,0.5);
+    // transform:scale(1.015);
+    // box-shadow:2px 2px .5rem rgba($color-primary-light-2,0.5);
+    // box-shadow:0 0 0 .5rem $color-primary-dark;
 
   }
 }

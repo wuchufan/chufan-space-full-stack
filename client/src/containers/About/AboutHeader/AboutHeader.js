@@ -14,13 +14,16 @@ const aboutHeader = (props) => {
         <h1 className={classes['heading-box__text']}>I build stuff.</h1>
       </div>
 
-      <div className={classes['intro']}>
+      <div className={classes['intro'] + ' ' + classes['u-padding-top-small']
+         // + ' ' + classes['u-margin-bottom-small']
+       }>
 
         <Introduction/>
       </div>
-      <div className={classes['text-block']}>
+      <div className={classes['text-block'] + ' ' + classes['u-padding-top-small']}>
+        <h1 className={classes['heading-primary--about--sub']}>And...</h1>
         <p className={classes['text-block__text']}>
-          I'm currently working as a web developer, and my works mostly focus on front-end development, but I'm also interested in back-end and trying to learn as much as I can in my free time.
+          I'm currently working as a web developer, and my works mostly focus on front-end development, but I'm also interested in back-end.
         </p>
 
       </div>

@@ -2,18 +2,69 @@
 
 .skill-box{
   position:relative;
-  margin-bottom: 1rem;
   border-radius: 5px;
   transition: all 0.2s ease;
+
+  &.active,
   &:hover{
-    background-color:$color-grey-light-1;
+    background-color:$color-grey-dark;
+    opacity:1;
+    //indivial skill box style
+    & .skill-box__icon{
+      &::before,
+      &::after{
+        content:'';
+        position:absolute;
+        top:50%;
+        right:20%;
+        height:4px;
+        width:2rem;
+        background-color: white;
+        transform-origin: right;
+        transition:all 0.2s;
+
+      }
+
+      &::after{
+        transform: translateY(1px) rotate(45deg);
+      }
+      &::before{
+        transform: translateY(-1px) rotate(-45deg);
+      }
+    }
   }
 
+  &.active .skill-box__icon{
+    &::before,
+    &::after{
+      content:'';
+      position:absolute;
+      top:50%;
+      right:20%;
+      height:4px;
+      width:2rem;
+      background-color: white;
+      transform-origin: right;
 
-  & h1{
-    height:4rem;
+    }
+
+    &::after{
+      transform: translate(-1px,.5rem) rotate(135deg);
+    }
+    &::before{
+      transform: translate(1px,.5rem) rotate(45deg);
+    }
   }
+
+  &__skill{
+    position:relative;
+    padding:4rem;
+    font-weight:100;
+  }
+
 }
+
+
 .cursor{
   cursor: pointer;
 }
@@ -30,6 +81,8 @@
 .active{
   visibility:visible;
   opacity:1;
+}
 
-
+.fade{
+  opacity:0.4;
 }

@@ -12,15 +12,25 @@ render(){
   if (!this.props.details.length){ cursorStyle = null }
 
   return(
-  <li className={[classes['skill-box'],cursorStyle].join(' ')} onClick={this.props.clicked}>
+  <li className={[classes['skill-box'],
+    cursorStyle,
+    this.props.active
+    ? classes['active']
+    : this.props.fade ? classes['fade'] : null].join(' ')} onClick={this.props.clicked}>
 
-    <h1>{this.props.children}</h1>
+    <h1 className={classes['skill-box__skill']}>{this.props.children}<span
+      className={
+        [classes['skill-box__icon'],
+        this.props.active ? classes['active'] : null].join(' ')
+
+    }></span></h1>
+
     <ul className={
-        this.props.active
-
-          ? [classes['detail-box'],classes['active']].join(' ')
-          : classes['detail-box']
-      }>
+      [classes['detail-box'],
+      this.props.active
+      ? classes['active']
+      : null].join(' ')
+        }>
       {details}
     </ul>
   </li>

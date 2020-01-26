@@ -2,10 +2,10 @@
 
 .education{
   @include aboutBlock
-
+  @include about-hover
   &__list{
     list-style:none;
   }
-  @include about-hover
+
   transition:$block-transition;
 }

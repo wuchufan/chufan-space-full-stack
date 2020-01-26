@@ -20,7 +20,13 @@ body{
     border-bottom: 1px solid rgba($color-grey-dark,0.4);
     margin-bottom:2.5rem;
     font-weight:100;
-    
+
+    &--sub{
+      color:$color-primary-dark;
+      font-size:2.5rem;
+      margin-bottom:1rem;
+      font-weight:100;
+    }
   }
 }
 .heading-secondary{

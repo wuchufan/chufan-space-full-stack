@@ -15,7 +15,9 @@
     "Grid",
     "etc"
   ],
-  "SCSS":["variables"],
+  "SCSS":[
+    "variables"
+  ],
   "Javascript":[
     "Object oriented javascript",
     "closure",
@@ -23,7 +25,9 @@
     "promise",
     "etc..."
   ],
-  "JQuery":["read documentation"],
+  "JQuery":[
+    "read documentation"
+  ],
   "ReactJs":[
     "React router",
     "redux",
@@ -43,7 +47,9 @@
 
   },
   "physics":{
-    "Data analysis using python, C/C++":["test"]
+    "Data analysis using python, C/C++":[
+      "test"
+    ]
   }
 
 }

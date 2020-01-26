@@ -36,14 +36,20 @@ class Skills extends Component{
 
           let skills = Object.keys(skillType[type]) //->[HTML,CSS,...]
           //skillType[skill] -> HTML
-          console.log(skills);
+
 
           return(skills.map((skill,index)=>{
             let details = skillType[type][skill]
-            console.log('skill:',skill);
+
             return (<Skill
               clicked={()=>this.itemClickedHanlder(index,type)}
               active={this.state.activeIndex === index && this.state.activeType === type}
+              fade={
+                // this.state.activeIndex !== index &&
+                this.state.activeIndex !== null &&
+                // this.state.activeType !== type &&
+                this.state.activeType !== null
+              }
               key={index}
               details={details}>
               {skill}
@@ -68,14 +74,14 @@ class Skills extends Component{
       <h1 className={classes['heading-primary--about']}>Skills</h1>
       <div className={classes['skills']}>
         <div className={classes['skills__webdev']}>
-          <h2>Web development</h2>
+          <h2 className={classes['u-margin-bottom-small']}>Web development</h2>
           <ul className={classes['skills__list']}>
             {this.getSkills('webDev')}
 
           </ul>
         </div>
         <div className={classes['skills__physics']}>
-          <h2>Physics</h2>
+          <h2 className={classes['u-margin-bottom-small']}>Physics</h2>
           <ul className={classes['skills__list']}>
 
             {this.getSkills('physics')}

@@ -39,12 +39,13 @@
     flex:0 1 45%;
     @include aboutBlock
     @include about-text-block($heading-sentence)
+    @include about-hover
     &__text{
       font-weight:100;
       font-size:1.6rem;
     }
     transition:$block-transition;
-    @include about-hover
+
 
   }
   .intro{
@@ -52,7 +53,9 @@
     flex:0 1 45%;
     @include about-intro($heading-sentence)
     @include aboutBlock
-    padding-top:2rem;
-    transition:$block-transition;
     @include about-hover
+    // padding-top:2rem;
+    transition:$block-transition;
+
+
   }
