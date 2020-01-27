@@ -1,11 +1,16 @@
 @import '../../../../../../sass/main.module.scss';
 .item{
   list-style: none;
-  font-size: 2rem;
+  font-size: $about-skill-font;
   padding:1.5rem;
   width:90%;
   margin:0 auto;
-  color:black;
+  color:$color-black;
+  transition:all 0.2s ease;
+
+  &:hover{
+    color:$color-grey-light-1;
+  }
 
 
   &:not(:last-child){

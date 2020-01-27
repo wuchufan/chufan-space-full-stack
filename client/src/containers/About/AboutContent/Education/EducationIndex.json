@@ -1,0 +1,22 @@
+{
+  "physics":
+  ["Classical Mechanics",
+  "Quantum Mechanics",
+  "Electromagnetism ",
+  "Nuclear physics",
+  "Thermal physics/statistical mechanics",
+  "High energy physics",
+  "Interpretation of quantum mechanics",
+  "Experimental physics "],
+
+
+  "math":
+["Calculus",
+"Multivariable Calculus",
+"Linear Algebra",
+"Complex variable",
+"Ordinary differential equation",
+"Partial differential equation"]
+
+
+}

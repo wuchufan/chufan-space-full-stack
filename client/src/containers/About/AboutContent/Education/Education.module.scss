@@ -3,9 +3,45 @@
 .education{
   @include aboutBlock
   @include about-hover
+  transition:$block-transition;
+
+}
+
+
+.basics{
+  display:flex;
+  flex-direction:row;
+
+  &__school-box,
+  &__major-box{
+    flex:1 1;
+  }
+
+
+  &__date{
+    display:block;
+    font-weight:100;
+    font-size:1rem;
+
+  }
+
+}
+
+
+.courses{
+  display:flex;
+  flex-direction:row;
+
   &__list{
     list-style:none;
   }
+  &__title{
+    font-weight:900;
+  }
 
-  transition:$block-transition;
+  &__physics-box,
+  &__math-box{
+    flex:1 1;
+  }
+
 }

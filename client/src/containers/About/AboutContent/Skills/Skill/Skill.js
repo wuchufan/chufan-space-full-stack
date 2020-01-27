@@ -12,14 +12,14 @@ render(){
   return(
   <li className={
     this.props.details.length
-    //Detail Box non-empty styles
+    //Skill Box non-empty styles
     ? [classes['skill-box'],
       classes['cursor'],
     this.props.active
     ? classes['active']
     : this.props.fade ?
     classes['fade'] : null].join(' ')
-    //Detail Box empty styles
+    //Skill Box empty styles
     : [classes['skill-box--empty'], this.props.fade ? classes['fade'] : null].join(' ')} onClick={this.props.details.length ? this.props.clicked: null}>
 
     <h1 className={

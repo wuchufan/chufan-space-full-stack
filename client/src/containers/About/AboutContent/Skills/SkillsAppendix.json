@@ -1,37 +1,39 @@
 {
   "webDev":{
-  "HTML":[
+  "HTML(5)":[
     "Canvas",
-    "etc"
+    "SVG etc..."
   ],
-  "CSS":[
+  "CSS(3)":[
     "Float layout",
     "Flexbox layout",
     "Grid layout",
-    "responsive design",
-    "Animation etc"
+    "Responsive design",
+    "Animation etc..."
+
   ],
   "Bootstrap":[
-    "Grid",
-    "etc"
+    "Grid etc..."
   ],
   "SCSS":[
-    "variables"
+
   ],
   "Javascript":[
     "Object oriented javascript",
-    "closure",
-    "scope chain",
-    "promise",
-    "etc..."
+    "DOM manipulation",
+    "IIFE",
+    "Closure",
+    "Scope chain",
+    "Promise etc..."
+
   ],
   "JQuery":[
-    "read documentation"
+
   ],
   "ReactJs":[
     "React router",
-    "redux",
-    "Animation"
+    "Redux",
+    "Animation etc..."
   ],
   "NodeJs":[
     "Express"
@@ -42,6 +44,9 @@
   "Version control":[
     "Git"
   ],
+  "BEM":[],
+  "MVC":[],
+  "Wix":[],
   "Npm packages":[],
   "Bash command line":[]
 

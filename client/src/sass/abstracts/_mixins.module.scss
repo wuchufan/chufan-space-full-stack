@@ -15,7 +15,7 @@
 //Styling - About
 @mixin aboutBlock{
   margin-bottom:8rem;
-  background-color: #f2feff;
+  background-color: $color-primary-light-2;
   padding:$homepage-block-padding;
   border-radius:5px;
 }

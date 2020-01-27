@@ -10,18 +10,21 @@
 .skills{
   display:flex;
   flex-direction:row;
+  // justify-content: space-evenly;
 
-
+  &__title{
+    font-weight:900;
+    font-size:2rem;
+    margin-left:$about-skill-padding;
+  }
   &__list{
     list-style:none;
-    width:80%;
+    width:60%;
   }
 
+  &__physics,
   &__webdev{
-    flex:0 1 50%;
+    flex:1 1;
   }
 
-  &__physics{
-    flex:0 1 50%;
-  }
 }
