@@ -45,9 +45,7 @@ class Skills extends Component{
               clicked={()=>this.itemClickedHanlder(index,type)}
               active={this.state.activeIndex === index && this.state.activeType === type}
               fade={
-                // this.state.activeIndex !== index &&
                 this.state.activeIndex !== null &&
-                // this.state.activeType !== type &&
                 this.state.activeType !== null
               }
               key={index}
@@ -74,14 +72,14 @@ class Skills extends Component{
       <h1 className={classes['heading-primary--about']}>Skills</h1>
       <div className={classes['skills']}>
         <div className={classes['skills__webdev']}>
-          <h2 className={classes['u-margin-bottom-small']}>Web development</h2>
+          <h2 className={classes['u-margin-bottom-medium']}>Web development</h2>
           <ul className={classes['skills__list']}>
             {this.getSkills('webDev')}
 
           </ul>
         </div>
         <div className={classes['skills__physics']}>
-          <h2 className={classes['u-margin-bottom-small']}>Physics</h2>
+          <h2 className={classes['u-margin-bottom-medium']}>Physics</h2>
           <ul className={classes['skills__list']}>
 
             {this.getSkills('physics')}

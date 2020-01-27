@@ -47,8 +47,9 @@
 
   },
   "physics":{
-    "Data analysis using python, C/C++":[
-      "test"
+    "Data analysis":[
+      "Python",
+      "C/C++"
     ]
   }
 
