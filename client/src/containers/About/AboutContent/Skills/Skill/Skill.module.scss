@@ -2,13 +2,13 @@
 
 .skill-box{
   transition: all 0.2s ease;
+  border-radius: 5px;
   position:relative;
 
   &.active,
   &:hover{
     background-color:$color-grey-dark;
     color:$color-white;
-    border-radius: 5px;
     opacity:1;
 
     //indivial skill box style

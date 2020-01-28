@@ -24,6 +24,7 @@
     "IIFE",
     "Closure",
     "Scope chain",
+    "Hoisting",
     "Promise etc..."
 
   ],
