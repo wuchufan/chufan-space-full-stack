@@ -11,12 +11,16 @@
 .basics{
   display:flex;
   flex-direction:row;
+  margin-bottom:3rem;
 
-  &__school-box,
-  &__major-box{
-    flex:1 1;
+  &__school-box{
+    flex:0 1 50%;
   }
 
+
+ &__major-box{
+   flex-basis:40%;
+ }
 
   &__date{
     display:block;

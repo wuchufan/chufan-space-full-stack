@@ -9,22 +9,32 @@
 
 .skills{
   display:flex;
-  flex-direction:row;
-  // justify-content: space-evenly;
+  flex-direction:column;
+
+
 
   &__title{
     font-weight:900;
     font-size:2rem;
     margin-left:$about-skill-padding;
   }
-  &__list{
-    list-style:none;
-    width:60%;
+
+  &__container{
+    &:not(:last-child){
+      margin-bottom:4rem;
+    }
   }
 
-  &__physics,
-  &__webdev{
+  &__list-container{
+    display:flex;
+    flex-direction:row ;
+  }
+  &__list{
+    list-style:none;
     flex:1 1;
   }
+
+
+
 
 }

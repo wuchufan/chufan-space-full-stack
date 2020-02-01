@@ -16,7 +16,6 @@ class Skills extends Component{
           //before it was nothing or not clicking the same thing
           this.setState({activeIndex:index, activeType:type});
         } else {
-
             //clicked the same thing
             //make it inactive
             this.setState({activeIndex:null, activeType:null});
@@ -37,7 +36,6 @@ class Skills extends Component{
           let skills = Object.keys(skillType[type]) //->[HTML,CSS,...]
           //skillType[skill] -> HTML
 
-
           return(skills.map((skill,index)=>{
             let details = skillType[type][skill]
 
@@ -46,8 +44,7 @@ class Skills extends Component{
               active={this.state.activeIndex === index && this.state.activeType === type}
               fade={
                 this.state.activeIndex !== null &&
-                this.state.activeType !== null
-              }
+                this.state.activeType !== null}
               key={index}
               details={details}>
               {skill}
@@ -65,27 +62,31 @@ class Skills extends Component{
 
 
   render(){
-
+    let webDevDisplay = 8;
   return(
     <div className={classes['skills-section']}>
-
       <h1 className={classes['heading-primary--about']}>Skills</h1>
       <div className={classes['skills']}>
-        <div className={classes['skills__webdev']}>
-          <h2 className={classes['u-margin-bottom-medium'] + ' ' + classes['skills__title']}>Web development skills</h2>
-          <ul className={classes['skills__list']}>
-            {this.getSkills('webDev')}
+        <div className={classes['skills__container'] + ' ' + classes['webdev']}>
+          <h2 className={classes['u-margin-bottom-small'] + ' ' + classes['skills__title']}>Web development skills</h2>
+          <div className={classes['skills__list-container']}>
+            <ul className={classes['skills__list']}>
+              {this.getSkills('webDev')[0].slice(0,webDevDisplay)}
+            </ul>
+            <ul className={classes['skills__list']}>
+              {this.getSkills('webDev')[0].slice(webDevDisplay)}
+            </ul>
+          </div>
 
-          </ul>
         </div>
-        <div className={classes['skills__physics']}>
-          <h2 className={classes['u-margin-bottom-medium'] + ' ' + classes['skills__title']}>Physics skills</h2>
+        <div className={classes['skills__container'] + ' ' + classes['physics']}>
+          <h2 className={classes['u-margin-bottom-small'] + ' ' + classes['skills__title']}>Physics skills</h2>
           <ul className={classes['skills__list']}>
             {this.getSkills('physics')}
         </ul>
       </div>
-      </div>
     </div>
+  </div>
 
     )
   }

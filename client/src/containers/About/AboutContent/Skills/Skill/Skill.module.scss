@@ -1,7 +1,13 @@
 @import '../../../../../sass/main.module.scss';
 
-.skill-box{
+.skill-box,
+.skill-box--empty{
   transition: all 0.2s ease;
+  width:50%;
+}
+
+//skill box style
+.skill-box{
   border-radius: 5px;
   position:relative;
 
@@ -11,7 +17,7 @@
     color:$color-white;
     opacity:1;
 
-    //indivial skill box style
+    //indivial skill box icon style
     & .skill-box__icon{
       &::before,
       &::after{
@@ -63,13 +69,11 @@
     }
   }
 
-    &--empty{
-      transition:all 0.2s ease;
-    &:hover{
-
+    //empty skill box hover style
+    &--empty:hover{
       background-color:transparent;
     }
-  }
+
 
   &__skill{
     position:relative;
@@ -87,6 +91,7 @@
   cursor: pointer;
 }
 
+//detail box style
 .detail-box{
   visibility: hidden;
   display:flex;

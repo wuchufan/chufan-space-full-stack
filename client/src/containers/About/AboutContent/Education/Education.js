@@ -27,7 +27,10 @@ const education = (props) =>{
           </h1>
         </div>
         <div className={classes['basics__major-box']}>
-          <p>University of Toronto Physics specialist</p>
+          <h1>Physics specialist</h1>
+          <p>My physics education gave me rigourous training in mathematics and theoretical physics background.
+          I've also had training for practical skills from courses like experimental physics, where we program to analyze experimental data, and build model to explain the data.
+        Most importantly, my education had trained me on how to learn, and this enables me to pick up web development after my graduation.</p>
         </div>
       </div>
       <div className={classes['courses']}>
