@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const path = require("path");
 const app = express();
 
 const port = process.env.PORT || 5000;
@@ -12,6 +13,7 @@ mongoose.connect("mongodb+srv://chufan-wu:myhappyday@cluster0-8k7im.mongodb.net/
 app.use(bodyParser.urlencoded({
   extended: true
 }));
+
 
 //mongoose schema
 const composeSchema = {
@@ -49,6 +51,13 @@ app.get('/posts/:id',(req,res)=>{
 
   });
 });
+
+if (process.env.NODE_ENV === 'production'){
+  app.use(express.static('client/build'));
+  app.get('*',(req,res)=>{
+    res.senFile(path.resolve(__dirname,'client','build','index.html'))
+  })
+}
 
 app.listen(port, ()=>{
   console.log(`Sever is up at ${port}`);
