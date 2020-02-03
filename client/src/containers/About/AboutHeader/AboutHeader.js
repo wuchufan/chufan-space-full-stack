@@ -21,7 +21,7 @@ const aboutHeader = (props) => {
       <div className={classes['text-block'] + ' ' + classes['u-padding-top-small']}>
         <h1 className={classes['heading-primary--about--sub']}>And...</h1>
         <p className={classes['text-block__text']}>
-           My works mostly focus on front-end development, but I'm also have some knowledge in back-end and will actively learn new back-end technique.
+           My works mostly focus on front-end development, but I'm also interested in back-end and actively learning new back-end techniques.
         </p>
 
       </div>

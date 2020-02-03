@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const app = express();
 
+const port = process.env.PORT || 5000;
 
 mongoose.connect("mongodb+srv://chufan-wu:myhappyday@cluster0-8k7im.mongodb.net/blogDB",
   { useUnifiedTopology: true ,useNewUrlParser: true});
@@ -49,6 +50,6 @@ app.get('/posts/:id',(req,res)=>{
   });
 });
 
-app.listen(5000, ()=>{
-  console.log("Sever is up at 5000");
+app.listen(port, ()=>{
+  console.log(`Sever is up at ${port}`);
 });
