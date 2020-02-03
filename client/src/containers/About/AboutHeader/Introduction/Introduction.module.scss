@@ -7,6 +7,14 @@
     font-weight:100;
 
   }
+
+  &__link{
+    font-size: 2rem;
+
+    & span{
+      display:inline-block;
+    }
+  }
 }
 
 
@@ -14,10 +22,10 @@
   &__my-pic{
     position:relative;
     float:left;
-    -webkit-clip-path:circle(40% at 60% 50%);
-    clip-path:circle(40% at 60% 50%);
-    -webkit-shape-outside:circle(40% at 63% 50%);
-    shape-outside:circle(40% at 63% 50%);
+    -webkit-clip-path:circle(40% at 50% 50%);
+    clip-path:circle(40% at 50% 50%);
+    -webkit-shape-outside:circle(40% at 53% 50%);
+    shape-outside:circle(40% at 53% 50%);
     transform:translateX(-2rem);
     width:20rem;
   }

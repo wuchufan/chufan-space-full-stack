@@ -25,7 +25,8 @@ const composeModel = mongoose.model("blog", composeSchema);
 app.get('/posts',(req,res)=>{
   composeModel.find({}, function(err, foundCompose) {
     if (!err) {
-      res.send(foundCompose);
+      let invOrder = foundCompose.reverse();
+      res.send(invOrder);
       }
     }
   )

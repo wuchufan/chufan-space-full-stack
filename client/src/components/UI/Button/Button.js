@@ -1,6 +1,8 @@
 import React from 'react';
 import classes from './Button.module.scss';
 
+
+//props:Type, action
 const button = (props) =>{
   let button = null;
   switch (props.type){
@@ -19,17 +21,17 @@ const button = (props) =>{
     button = <span onClick={props.action} className={classes['btn--text--2']}>{props.children}</span>
     break;
 
-    
+
     default:
     button = <button onClick={props.action}
       className={classes.btn}>{props.children}</button>;
 
   }
   return(
-    <div>
+    <React.Fragment>
       {button}
-    </div>
 
+    </React.Fragment>
   );
 };
 

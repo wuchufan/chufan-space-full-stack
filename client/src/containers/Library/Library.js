@@ -7,7 +7,7 @@ class Library extends Component{
     return (
       <Pages>
         <h1>
-          This is Library
+          Upcoming content: Note for Relativistic electrodynamics.
         </h1>
       </Pages>
     )

@@ -60,10 +60,6 @@ class PostsList extends Component{
             <Pages>
               <section className={classes['post']}>
                 {posts}
-                {/* <div className={classes['post__button']}>
-                  <Button action={this.newPostActionHandler} type='button'>New Post</Button>
-                  
-                </div> */}
               </section>
 
             </Pages>

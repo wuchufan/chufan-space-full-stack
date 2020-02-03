@@ -20,12 +20,17 @@
 
  &__major-box{
    flex-basis:40%;
+
+   & span{
+     display:inline-block;
+     margin-right:2rem;
+   }
  }
 
   &__date{
     display:block;
     font-weight:100;
-    font-size:1rem;
+    font-size:1.6rem;
 
   }
 
@@ -33,18 +38,21 @@
 
 
 .courses{
-  display:flex;
-  flex-direction:row;
 
+  &__container{
+    display:flex;
+    flex-direction:row;
+  }
   &__list{
     list-style:none;
   }
   &__title{
-    font-weight:900;
+    font-weight:700;
   }
 
   &__physics-box,
-  &__math-box{
+  &__math-box,
+  &__philosophy-box{
     flex:1 1;
   }
 

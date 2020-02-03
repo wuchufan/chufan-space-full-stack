@@ -7,16 +7,20 @@
   "Thermal physics/statistical mechanics",
   "High energy physics",
   "Interpretation of quantum mechanics",
-  "Experimental physics "],
+  "Experimental physics",
+  "Undergraduate physics research project"],
 
 
   "math":
 ["Calculus",
-"Multivariable Calculus",
-"Linear Algebra",
+"Multivariable calculus",
+"Linear algebra",
 "Complex variable",
 "Ordinary differential equation",
-"Partial differential equation"]
-
+"Partial differential equation"],
+  "philosophy":
+  ["Philosophy of science",
+  "Philosophy of physics",
+  "Philosophy for scientists"]
 
 }

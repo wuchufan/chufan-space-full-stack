@@ -3,6 +3,7 @@ import classes from './Skills.module.scss';
 import skillType from './SkillsAppendix.json';
 import Skill from './Skill/Skill';
 
+
 class Skills extends Component{
   state = {
     activeIndex:null,
@@ -81,9 +82,12 @@ class Skills extends Component{
         </div>
         <div className={classes['skills__container'] + ' ' + classes['physics']}>
           <h2 className={classes['u-margin-bottom-small'] + ' ' + classes['skills__title']}>Physics skills</h2>
-          <ul className={classes['skills__list']}>
-            {this.getSkills('physics')}
-        </ul>
+          <div className={classes['skills__list-container']}>
+            <ul className={classes['skills__list']}>
+              {this.getSkills('physics')}
+          </ul>
+          </div>
+
       </div>
     </div>
   </div>
