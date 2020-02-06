@@ -22,7 +22,8 @@ class PostsList extends Component{
     }
 
     componentDidMount(){
-      axios.get('/posts')
+      console.log(this.props);
+      axios.get('api/posts')
       .then((response)=>{
         console.log(response.data);
         const fetchedPosts = [];

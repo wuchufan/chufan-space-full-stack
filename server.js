@@ -25,14 +25,18 @@ const composeSchema = {
 
 const composeModel = mongoose.model("blog", composeSchema);
 
-if (process.env.NODE_ENV === 'production'){
+// if (process.env.NODE_ENV === 'production'){
   // app.use(express.static('client/build'));
   app.get('*',(req,res)=>{
-    res.sendFile(path.resolve(__dirname,'client','build','index.html'))
-  })
-}
+    if (req.url.substring(0,4) !== '/api'){
+      res.sendFile(path.resolve(__dirname,'client','public','index.html'));
+    }
+    
+});
 
-app.get('/posts',(req,res)=>{
+
+app.get('/api/posts',(req,res)=>{
+  console.log(123);
   composeModel.find({}, function(err, foundCompose) {
     if (!err) {
       let invOrder = foundCompose.reverse();
