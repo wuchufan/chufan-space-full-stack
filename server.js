@@ -25,6 +25,13 @@ const composeSchema = {
 
 const composeModel = mongoose.model("blog", composeSchema);
 
+if (process.env.NODE_ENV === 'production'){
+  app.use(express.static('client/build'));
+  app.get('*',(req,res)=>{
+    res.sendFile(path.resolve(__dirname,'client','build','index.html'))
+  })
+}
+
 app.get('/posts',(req,res)=>{
   composeModel.find({}, function(err, foundCompose) {
     if (!err) {
@@ -52,12 +59,7 @@ app.get('/posts/:id',(req,res)=>{
   });
 });
 
-if (process.env.NODE_ENV === 'production'){
-  app.use(express.static('client/build'));
-  app.get('*',(req,res)=>{
-    res.sendFile(path.resolve(__dirname,'client','build','index.html'))
-  })
-}
+
 
 app.listen(port, ()=>{
   console.log(`Sever is up at ${port}`);
