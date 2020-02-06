@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "root": "build/",
+=======
+  "root": "client/build/",
+>>>>>>> temp2
   "clean_urls": false,
   "routes": {
     "/**": "index.html"
