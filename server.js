@@ -27,16 +27,11 @@ const composeModel = mongoose.model("blog", composeSchema);
 
 // if (process.env.NODE_ENV === 'production'){
   // app.use(express.static('client/build'));
-  app.get('*',(req,res)=>{
-    if (req.url.substring(0,4) !== '/api'){
-      res.sendFile(path.resolve(__dirname,'client','public','index.html'));
-    }
-    
-});
+
 
 
 app.get('/api/posts',(req,res)=>{
-  console.log(123);
+
   composeModel.find({}, function(err, foundCompose) {
     if (!err) {
       let invOrder = foundCompose.reverse();
@@ -46,7 +41,7 @@ app.get('/api/posts',(req,res)=>{
   )
 });
 
-app.get('/posts/:id',(req,res)=>{
+app.get('/api/posts/:id',(req,res)=>{
 
   composeModel.findById({
   _id: req.params.id
@@ -63,7 +58,14 @@ app.get('/posts/:id',(req,res)=>{
   });
 });
 
+if (process.env.NODE_ENV === 'production'){
+app.use(express.static('client/build'));
+app.get('*',(req,res)=>{
+    console.log(req.url);
+    res.sendFile(path.resolve(__dirname,'client','public','index.html'));
 
+  });
+}
 
 app.listen(port, ()=>{
   console.log(`Sever is up at ${port}`);

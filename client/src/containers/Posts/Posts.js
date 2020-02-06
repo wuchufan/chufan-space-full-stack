@@ -10,7 +10,7 @@ class Posts extends Component{
 
   render(){
 
-    console.log();
+    console.log(this.props.match.url);
     return(
       <Switch>
 
