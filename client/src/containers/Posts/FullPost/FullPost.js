@@ -16,7 +16,7 @@ class FullPost extends Component{
 
   loadData=()=>{
     if(this.props.match.params.id){
-      console.log(this.props.match.params.id,this.props);
+
       axios.get('/api/posts/' + this.props.match.params.id)
       .then((response)=>{;
 

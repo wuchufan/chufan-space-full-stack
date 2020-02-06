@@ -9,8 +9,6 @@ import PostsList from './PostsList/PostsList';
 class Posts extends Component{
 
   render(){
-
-    console.log(this.props.match.url);
     return(
       <Switch>
 
