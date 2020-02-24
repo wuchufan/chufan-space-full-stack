@@ -16,7 +16,7 @@ class SideBar extends Component{
 
     switch (this.props.location.pathname){
       case '/':
-        sideBarStyle.push(classes['side-bar--width-small']);
+        sideBarStyle.push(classes['side-bar--width-medium']);
       break;
 
       case '/about':

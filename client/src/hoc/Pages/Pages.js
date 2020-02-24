@@ -24,7 +24,7 @@ class Pages extends Component {
     switch (this.props.location.pathname){
       case '/':
         pageStyle.push(
-        classes['pages--width-large'],
+        classes['pages--width-medium'],
         classes['pages__container']);
 
       break;
