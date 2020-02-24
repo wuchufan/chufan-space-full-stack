@@ -54,6 +54,9 @@ class HomePage extends Component{
                   <p className={classes['home__announcement--content']}>
                     Meowster is currently working hard on expanding this universe. He is looking for ideas on what to add. Tell me by leaving a message, meow!
                   </p>
+                  <p className={classes['home__announcement--content']}>
+                    Huge refactoring and functionality implementation coming in soon!
+                  </p>
                 </div>
 
               </div>

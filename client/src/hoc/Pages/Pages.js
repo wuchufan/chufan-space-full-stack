@@ -24,7 +24,7 @@ class Pages extends Component {
     switch (this.props.location.pathname){
       case '/':
         pageStyle.push(
-        classes['pages--width-medium'],
+        classes['pages--width-large'],
         classes['pages__container']);
 
       break;
@@ -67,7 +67,7 @@ class Pages extends Component {
 
           {navBar}
           <div className={contentStyle.join(' ')} >
-        
+
             {this.props.children}
           </div>
         </div>
