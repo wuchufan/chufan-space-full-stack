@@ -56,7 +56,7 @@ class SideBar extends Component{
 
 const mapStateToProps = state => {
   return {
-    show:state.ssb.checkShow
+    show:state.sideBar.checkShow
   }
 }
 
