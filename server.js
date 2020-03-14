@@ -14,7 +14,7 @@ connectDB();
 //init middleware
 app.use(express.json({extended: false }));
 
-app.use('/api/posts',require('./routes/api/Posts'));
+app.use('/api/posts',require('./routes/api/posts'));
 
 
 if (process.env.NODE_ENV === 'production'){
