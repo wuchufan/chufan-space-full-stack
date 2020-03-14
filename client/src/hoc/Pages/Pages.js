@@ -4,17 +4,18 @@ import { compose } from 'redux';
 import { connect } from 'react-redux';
 import classes from './Pages.module.scss';
 import NavBar from '../../components/NavBar/NavBar';
-import * as actionTypes from '../../store/actions';
+import { checkShow } from '../../actions/sideBar';
+
 
 class Pages extends Component {
 
   mouseMoveAndCheck = (e) =>{
-    this.props.onMouseMove(e);
-    this.props.checkShowSideBar(this.props.x);
+    this.props.checkShow(e);
   }
 
 
   render(){
+
     let pageStyle= [];
     let navBar = <NavBar/>;
     let contentStyle = [classes['pages__content']];
@@ -76,19 +77,7 @@ class Pages extends Component {
   }
 };
 
-const mapStateToProps = state => {
-  return{
-  x:state.msm.x,
-  show:state.ssb.showSideBar}
-}
-
-const mapDispatchToProps = dispatch => {
-  return {
-    onMouseMove: (event) => dispatch({type:actionTypes.MOUSEMOVE, event:event}),
-    checkShowSideBar: (x) => dispatch({type:actionTypes.CHECKSHOW, x:x})
-  }
-};
 
 export default compose(
 withRouter,
-connect(mapStateToProps,mapDispatchToProps))(Pages);
+connect(null,{ checkShow }))(Pages);
