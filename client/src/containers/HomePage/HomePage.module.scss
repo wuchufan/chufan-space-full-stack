@@ -3,8 +3,8 @@
 .home{
   display:flex;
   flex-direction:column;
-  animation:$animation-move-right-medium-delay;
-  animation-fill-mode: backwards;
+  // animation:$animation-move-right-medium-delay;
+  // animation-fill-mode: backwards;
   padding:3rem;
 
   & > div:not(&__title){
@@ -50,9 +50,5 @@
 
 
 
-
-  &__announcement{
-
-  }
 
 }

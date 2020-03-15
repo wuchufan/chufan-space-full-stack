@@ -20,20 +20,20 @@
 
       &--1{
         color: $color-primary-dark;
-        animation:$animation-move-left-no-delay;
+        // animation:$animation-move-left-no-delay;
       }
 
       &--2{
         color:$color-primary-light-1;
-        animation:$animation-move-right-no-delay;
+        // animation:$animation-move-right-no-delay;
       }
 
 
   }
 
   &__cat-words{
-    animation:$animation-move-up-short-delay;
-    animation-fill-mode: backwards;
+    // animation:$animation-move-up-short-delay;
+    // animation-fill-mode: backwards;
 
 
    & span{
