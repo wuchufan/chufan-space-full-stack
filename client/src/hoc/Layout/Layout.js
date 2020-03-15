@@ -22,7 +22,7 @@ class Layout extends Component {
       <div className={classes['background']}>
       <Background/>
       </div>
-      <main className={classes['main']}}>
+      <main className={classes['main']}>
 
         <Route render={({location}) => {
           return (<React.Fragment>
