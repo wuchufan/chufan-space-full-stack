@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classes from './Button.module.scss';
 
 
@@ -27,12 +28,12 @@ const button = (props) =>{
       className={classes.btn}>{props.children}</button>;
 
   }
-  return(
-    <React.Fragment>
-      {button}
-
-    </React.Fragment>
-  );
+  return button
 };
+
+button.propTypes = {
+  action:PropTypes.func.isRequired,
+  type:PropTypes.string.isRequired
+}
 
 export default button;
