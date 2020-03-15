@@ -18,12 +18,11 @@ import Background from '../../components/Background/Background';
 
 class Layout extends Component {
   render() {
-    const vh = window.innerHeight * 0.01;
     return (<React.Fragment>
       <div className={classes['background']}>
       <Background/>
       </div>
-      <main className={classes['main']} style={{minHeight:100*vh}}>
+      <main className={classes['main']}}>
 
         <Route render={({location}) => {
           return (<React.Fragment>
