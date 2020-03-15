@@ -2,12 +2,11 @@
 
 .pages{
   &__container{
-  position:fixed;
+  position:absolute;
   top:0;
   right:0;
   bottom:0;
   overflow-y:scroll;
-  overflow-x:hidden;
   padding:$pages-padding;
   transition: all 1s ease;
   background-color: $color-primary-light-2;
