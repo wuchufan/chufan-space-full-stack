@@ -35,7 +35,7 @@ class BgCanvas extends Component{
   render(){
     return (
       <PureCanvas
-
+        
         height={window.innerHeight}
         width={window.innerWidth}
         contextRef={this.saveContext}
