@@ -1,9 +1,6 @@
 @import '../../../../sass/main.module.scss';
 
 .canvas{
-  position:absolute;
+  display:block;
   background-color: $color-primary;
-  top:0;
-  left:0;
-  z-index:-999;
 }

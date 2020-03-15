@@ -21,7 +21,9 @@ class Layout extends Component {
   render() {
 
     return (<React.Fragment>
+      <div className={classes['background']}>
       <Background/>
+      </div>
       <main className={classes['main']}>
 
         <Route render={({location}) => {
