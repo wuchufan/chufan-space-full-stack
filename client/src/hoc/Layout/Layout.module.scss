@@ -2,9 +2,11 @@
 
 .main{
   position:absolute;
+  display:block;
   left:0;
   right:0;
-  height:100vh;
+  bottom:0;
+  top:0;
   z-index:-1;
   overflow-x:hidden;
 }
