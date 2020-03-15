@@ -3,29 +3,28 @@
 .home{
   display:flex;
   flex-direction:column;
-  justify-content: space-between;
   min-height:100%;
-
-  &__title,
-  &__cat-words,
-  &__message-box{
-    margin-bottom: 3rem;
+  &:last-child{
+    margin-bottom: 15rem;
   }
 
+  &__title{
+    margin-bottom:6rem;
+  }
 
   &__title-span{
-
+      font-size: 12rem;
       line-height:1.2;
       display:block;
       text-transform: capitalize;
 
       &--1{
+        color: $color-primary-dark;
         animation:$animation-move-left-no-delay;
-
       }
 
       &--2{
-
+        color:$color-primary-light-1;
         animation:$animation-move-right-no-delay;
       }
 
@@ -36,8 +35,9 @@
     animation:$animation-move-up-short-delay;
     animation-fill-mode: backwards;
 
+
    & span{
-     font-size:1.7rem;
+     font-size:2.5rem;
      display:block;
      line-height:2;
     color:$color-primary-light-1;
@@ -45,16 +45,40 @@
 
    }
   }
+}
+.message-form{
+  margin-bottom: 6rem;
+}
 
-  &__message-box{
-    animation:$animation-move-up-medium-delay;
-    animation-fill-mode: backwards;
-    font-size: 2rem;
-    line-height:2;
-    color:rgba($color-primary-dark, 0.8);
-    font-weight:700;
+.text-bar{
+  display:flex;
+  margin-bottom: 3rem;
+}
 
+.clear-button{
+  background-color:transparent;
+  width:6rem;
+  border:none;
+  border-bottom:1rem solid #BEE1EF;
+  transition:all 0.2s ease;
+  outline:none;
+  cursor:pointer;
+
+  &:hover > .clear-button__icon{
+    fill:#BEE1EF;
 
   }
 
+  &__icon{
+    fill:rgba(#BEE1EF,0.2);
+    width:2rem;
+    height:2rem;
+    transition:all 0.2s ease;
+
+  }
+}
+
+.send-button{
+  width:3rem;
+  height:3rem;
 }

@@ -1,26 +1,38 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 import classes from './Input.module.scss';
 
 const input=(props)=>{
   let inputElement=null;
-  switch (props.elementType){
+  // console.log(classes);
+  // if(!props.className){
+  //   console.log('no props');
+  // }
+  switch (props.type){
     case('input'):
-    inputElement=<input value={props.value} className={classes.InputElement} onChange={props.inputChanged} {...props.elementConfig}/>;
+    inputElement=<input value={props.value} className={classes.InputElement + ' ' + classes[props.className]} style={props.style} onChange={props.onChange} {...props.elementConfig}  name={props.name} placeholder={props.placeholder}/>;
     break;
     case('textarea'):
-    inputElement=<textarea placeholder={props.placeholder} value={props.value} className={classes.InputElement+' '+classes[props.className]} onChange={props.inputChanged} {...props.elementConfig}/>;
+    inputElement=<textarea placeholder={props.placeholder} value={props.value} className={classes.InputElement + ' ' + classes[props.className]} onChange={props.onChange} {...props.elementConfig}  name={props.name}/>;
     break;
     default:
-    inputElement=<input value={props.value} className={classes.InputElement} onChange={props.inputChanged} {...props.elementConfig}/>;
+    inputElement=<input value={props.value} className={classes.InputElement + ' ' + classes[props.className]} onChange={props.onChange} {...props.elementConfig} name={props.name}/>;
     }
     return(
-      <div>
+      <Fragment>
         <label className={classes['Label']}>{props.children}</label>
         {inputElement}
-      </div>
+      </Fragment>
     );
   }
 
+input.propTypes = {
+  type:PropTypes.string.isRequired,
+  onChange:PropTypes.func.isRequired,
+  placeholder:PropTypes.string,
+  value:PropTypes.string.isRequired,
+  name:PropTypes.string.isRequired
+}
 
 
 

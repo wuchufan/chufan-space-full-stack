@@ -1,14 +1,15 @@
 import React,{Component} from 'react';
-import {NavLink} from 'react-router-dom';
 import Button from '../../components/UI/Button/Button';
 import Pages from '../../hoc/Pages/Pages';
-import 'katex/dist/katex.min.css';
 import classes from './HomePage.module.scss';
 
 class HomePage extends Component{
 
-  render(){
+  buttonOnClick = () =>{
+    this.props.history.push({pathname:'/about'});
+  }
 
+  render(){
     return(
       <React.Fragment>
         <Pages>
@@ -38,11 +39,9 @@ class HomePage extends Component{
                   Roam around, and make yourself comfortable, I've put my work in here. If you want to learn more about me, take this portal :)
                 </p>
                 <div className={classes['home__message--button']}>
-                  <NavLink to='/about'>
-                    <Button type='text-2'>
+                    <Button type='text-2' action={this.buttonOnClick}>
                       About me &rarr;
                     </Button>
-                  </NavLink>
                 </div>
               </div>
               <div className={classes['home__announcement']}>
@@ -58,9 +57,7 @@ class HomePage extends Component{
                     Huge refactoring and functionality implementation coming in soon!
                   </p>
                 </div>
-
               </div>
-
             </section>
           </div>
         </Pages>
