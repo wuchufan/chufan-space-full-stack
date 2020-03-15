@@ -4,6 +4,10 @@ import classes from './PureCanvas.module.scss';
 
 class PureCanvas extends Component{
 
+  onTouchMoveHandler(e){
+    e.preventDefault();
+  }
+
   shouldComponentUpdate(){
     return true;
   }
@@ -11,6 +15,7 @@ class PureCanvas extends Component{
   render(){
     return(
       <canvas
+        onTouchMove={(e)=>this.onTouchMoveHandler(e)}
         className={classes['canvas']}
         width={this.props.width}
         height={this.props.height}

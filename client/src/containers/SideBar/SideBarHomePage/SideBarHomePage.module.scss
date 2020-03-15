@@ -4,9 +4,12 @@
   display:flex;
   flex-direction:column;
   min-height:100%;
+  &:last-child{
+    margin-bottom: 15rem;
+  }
 
   &__title{
-    margin-bottom:3rem;
+    margin-bottom:6rem;
   }
 
   &__title-span{

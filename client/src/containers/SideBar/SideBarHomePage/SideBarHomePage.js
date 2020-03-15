@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import { sendMessage } from './SendMessage';
+import { sendMessage } from './Ajax/SendMessage';
 import Input from '../../../components/UI/Input/Input';
 import SideBar from '../../SideBar/SideBar';
 import classes from './SideBarHomePage.module.scss';
@@ -61,7 +61,7 @@ class SideBarHomePage extends Component{
               </svg>
             </button>
             </div>
-            <button className={classes['send-button']} onClick={(e)=>this.sendMessageHandler(e)}>asd</button>
+            {/* <button className={classes['send-button']} onClick={(e)=>this.sendMessageHandler(e)}>ss</button> */}
           </form>
           <div className={classes['home__cat-words']}>
             <p className={classes['paragraph']}>
