@@ -10,7 +10,7 @@ const input=(props)=>{
   // }
   switch (props.type){
     case('input'):
-    inputElement=<input value={props.value} className={classes.InputElement + ' ' + classes[props.className]} style={props.style} onChange={props.onChange} {...props.elementConfig}  name={props.name} placeholder={props.placeholder}/>;
+    inputElement=<input value={props.value} className={classes.InputElement + ' ' + classes[props.className]} style={props.style} onKeyDown={props.onKeyDown} onChange={props.onChange} {...props.elementConfig}  name={props.name} placeholder={props.placeholder}/>;
     break;
     case('textarea'):
     inputElement=<textarea placeholder={props.placeholder} value={props.value} className={classes.InputElement + ' ' + classes[props.className]} onChange={props.onChange} {...props.elementConfig}  name={props.name}/>;

@@ -2,13 +2,13 @@
 
 .main{
   position:absolute;
-  display:block;
+  // display:block;
   left:0;
   right:0;
   bottom:0;
   top:0;
-  z-index:-1;
-  min-height:100vh;
+  // z-index:-1;
+  // min-height:100vh;
   overflow-x:hidden;
 }
 
@@ -18,5 +18,5 @@
   left:0;
   bottom:0;
   right:0;
-  z-index:-999;
+  // z-index:-999;
 }

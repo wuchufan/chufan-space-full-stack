@@ -17,9 +17,7 @@ import Background from '../../components/Background/Background';
 
 
 class Layout extends Component {
-
   render() {
-
     return (<React.Fragment>
       <div className={classes['background']}>
       <Background/>

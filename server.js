@@ -15,7 +15,7 @@ connectDB();
 app.use(express.json({extended: false }));
 
 app.use('/api/posts',require('./routes/api/posts'));
-
+app.use('/api/send-email',require('./routes/api/send-email'));
 
 if (process.env.NODE_ENV === 'production'){
 app.use(express.static('client/build'));
