@@ -11,6 +11,7 @@ class PostsList extends Component{
       posts:null,
       error:null
     }
+    
     newPostActionHandler=()=>{
       this.props.history.push({
         pathname:'/createpost'});
